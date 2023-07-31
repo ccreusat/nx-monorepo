@@ -1,0 +1,56 @@
+@use "sass:map";
+@use "../abstracts/" as *;
+@use "../vendors/bootstrap";
+
+.alert {
+  --#{$prefix}alert-border-left-color: var(--#{prefix}gray-800);
+  --#{$prefix}alert-bg: var(--#{prefix}white);
+
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: var(--#{$prefix}body-color);
+  background-color: var(--#{$prefix}alert-bg);
+  border-color: var(--#{$prefix}alert-border-color);
+  border-left: $alert-left-border-width solid var(--#{$prefix}alert-border-left-color);
+
+  svg {
+    color: var(--#{$prefix}alert-color);
+  }
+
+  .alert-content {
+    font-size: bootstrap.$small-font-size;
+  }
+
+  .alert-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--#{$prefix}alert-border-color);
+    transition-property: transform;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  &.is-toast {
+    z-index: 20;
+    min-width: 352px;
+    max-width: 402px;
+    box-shadow: var(--#{$prefix}box-shadow);
+
+    @include bootstrap.media-breakpoint-up(xs) {
+      width: 100%;
+    }
+  }
+}
+
+@each $state,
+  $key in $support-colors {
+  .alert-#{$state} {
+    --#{$prefix}alert-color: #{map.get($key, "base")};
+    --#{$prefix}alert-border-color: #{map.get($key, "pale")};
+    --#{$prefix}alert-border-left-color: #{map.get($key, "base")};
+  }
+}

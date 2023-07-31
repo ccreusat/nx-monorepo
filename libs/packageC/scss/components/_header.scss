@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+.header {
+  .navbar {
+    &-title {
+      max-width: 40%;
+
+      @include text-truncate();
+    }
+  }
+}

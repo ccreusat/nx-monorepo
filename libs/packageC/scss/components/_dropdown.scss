@@ -1,0 +1,90 @@
+@use "../abstracts/" as *;
+
+.dropdown-item {
+  input[type="checkbox"] {
+    vertical-align: middle;
+  }
+}
+
+.dropdown-trigger {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  padding: 12px 16px;
+  color: var(--#{$prefix}gray-800);
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--#{$prefix}gray-400);
+  border-radius: 8px;
+
+  @include background-color-to(var(--#{$prefix}gray-200));
+
+  .dropdown-trigger-carret-icon {
+    transition: transform 0.2s $default-easing;
+    transform: rotate(-180deg);
+  }
+
+  .dropdown-trigger-icon {
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &.focus,
+  &:focus {
+    border-color: var(--#{$prefix}gray-600);
+  }
+
+  &.disabled {
+    color: var(--#{$prefix}gray-600);
+    background-color: var(--#{$prefix}gray-200);
+    border-color: var(--#{$prefix}gray-500);
+  }
+
+  &.selected {
+    border-color: $dropdowntrigger-selected-border-color;
+
+    .dropdown-trigger-carret-icon {
+      transform: rotate(0);
+    }
+  }
+
+  &.ghost {
+    background-color: transparent;
+    border: 0;
+
+    &.focus {
+      background-color: var(--#{$prefix}gray-200);
+      border: 1px solid var(--#{$prefix}gray-400);
+    }
+
+    &.selected {
+      background-color: $dropdowntrigger-selected-bg-color;
+    }
+  }
+
+  /* size variations */
+  &.sm {
+    padding: 4px 8px;
+    font-size: 1.4rem;
+    border-radius: $input-border-radius-sm;
+
+    .dropdown-trigger-icon {
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &.md {
+    padding: 8px 12px;
+    border-radius: $input-border-radius;
+  }
+
+  &.lg {
+    padding: 12px 16px;
+    border-radius: $input-border-radius-lg;
+  }
+}
