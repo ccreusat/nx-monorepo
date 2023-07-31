@@ -12,10 +12,6 @@ git clone https://github.com/opendigitaleducation/edifice-bootstrap.git
 pnpm install
 ```
 
-## Dev
-
-To use these generic styles, see documentation on `ode-bootstrap-one` or `ode-bootstrap-neo`
-
 ## Bootstrap 5.x
 
 If a component already exists in Bootstrap 5.x, we use it and override it if necessary. The same goes for utility classes.
