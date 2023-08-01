@@ -34,7 +34,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "bootstrap": "5.3.0"
+    "bootstrap": "5.3.0",
+    "@popperjs/core": "2.11.7"
   },
   "devDependencies": {
     "sass": "1.63.6",
