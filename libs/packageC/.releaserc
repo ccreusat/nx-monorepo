@@ -33,6 +33,10 @@
     {
       "name": "develop",
       "prerelease": true
+    },
+    {
+      "name": "develop-pedago",
+      "prerelease": true
     }
   ]
 }

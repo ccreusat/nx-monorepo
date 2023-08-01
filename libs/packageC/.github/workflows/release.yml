@@ -4,6 +4,7 @@ name: Semantic release
     branches:
       - main
       - develop
+      - develop-pedago
 permissions:
   contents: read #  for checkout
 jobs:
