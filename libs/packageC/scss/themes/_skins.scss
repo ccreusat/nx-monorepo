@@ -25,10 +25,12 @@
 }
 
 [data-product="one"][data-skin="default"] {
-  background-color: #2a9cc8;
   background-image: url("./images/backgrounds/hills.svg");
+  background-size: cover;
+  background-color: #a6ce3a;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 [data-skin="desert"] {
