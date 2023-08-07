@@ -107,14 +107,14 @@ h4,
 
 // Hack for multiline ellipsis
 .text-truncate {
-  .text-truncate-2 {
+  &.text-truncate-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     white-space: normal;
   }
 
-  .text-truncate-3 {
+  &.text-truncate-3 {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
