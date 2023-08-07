@@ -68,6 +68,14 @@
     border-radius: var(--#{$prefix}input-border-radius-lg);
   }
 
+  &.form-height-lg {
+    height: var(--#{$prefix}textarea-height-lg);
+  }
+
+  &.form-height-sm {
+    height: var(--#{$prefix}textarea-height-sm);
+  }
+
   &.no-validation-icon {
     background-image: none;
   }

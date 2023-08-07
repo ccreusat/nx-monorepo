@@ -197,6 +197,10 @@ $input-border-radius-sm: $border-radius !default;
 $input-border-radius-lg: $border-radius-lg !default;
 $focus-ring-color: var(--#{$prefix}secondary-200) !default;
 
+/* Forms Input */
+$textarea-height-lg: 250;
+$textarea-height-sm: 100;
+
 /* Forms check */
 $form-check-input-checked-bg-color: var(--#{$prefix}secondary) !default;
 $form-check-input-checked-border-color: var(--#{$prefix}secondary) !default;
