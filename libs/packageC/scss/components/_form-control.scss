@@ -54,26 +54,16 @@
   }
 
   &.form-control-sm {
-    padding:
-      var(--#{$prefix}input-padding-y-sm)
+    padding: var(--#{$prefix}input-padding-y-sm)
       var(--#{$prefix}input-padding-x-sm);
     font-size: var(--#{$prefix}input-font-size-sm);
     border-radius: var(--#{$prefix}input-border-radius-sm);
   }
 
   &.form-control-lg {
-    padding:
-      var(--#{$prefix}input-padding-y-lg)
+    padding: var(--#{$prefix}input-padding-y-lg)
       var(--#{$prefix}input-padding-x-lg);
     border-radius: var(--#{$prefix}input-border-radius-lg);
-  }
-
-  &.form-height-lg {
-    height: var(--#{$prefix}textarea-height-lg);
-  }
-
-  &.form-height-sm {
-    height: var(--#{$prefix}textarea-height-sm);
   }
 
   &.no-validation-icon {
