@@ -9,12 +9,14 @@
   --#{$prefix}btn-border-radius: 1.2rem;
   text-transform: uppercase;
 
-  &:not(.btn-icon,
-    .btn-search,
-    .btn-ghost-primary,
-    .btn-ghost-secondary,
-    .btn-ghost-tertiary,
-    .btn-ghost-danger) {
+  &:not(
+      .btn-icon,
+      .btn-search,
+      .btn-ghost-primary,
+      .btn-ghost-secondary,
+      .btn-ghost-tertiary,
+      .btn-ghost-danger
+    ) {
     svg {
       transform: translateY(-0.2rem);
     }
@@ -49,17 +51,17 @@
 }
 
 // Filled Button
-@each $value,
-$key in $button-colors {
+@each $value, $key in $button-colors {
   .btn-#{$value} {
-    @include mixins.variant-button-filled(map.get($key, "base"),
+    @include mixins.variant-button-filled(
+      map.get($key, "base"),
       map.get($key, "dark"),
       map.get($key, "light"),
       map.get($key, "text"),
-      map.get($key, "box-shadow"));
+      map.get($key, "box-shadow")
+    );
 
     &.btn-filled {
-
       &:hover,
       &.hover {
         --#{$prefix}btn-border-width: 0.1rem;
@@ -72,9 +74,8 @@ $key in $button-colors {
     }
   }
 
-  @if ($value =="tertiary") {
+  @if ($value == "tertiary") {
     .btn-#{$value} {
-
       &:disabled,
       &.disabled {
         --#{$prefix}btn-disabled-bg: #{$gray-200};
@@ -85,15 +86,16 @@ $key in $button-colors {
 }
 
 // Outlined Button
-@each $value,
-$key in $button-colors {
+@each $value, $key in $button-colors {
   .btn-outline-#{$value} {
-    @include mixins.variant-button-outlined(map.get($key, "base"),
+    @include mixins.variant-button-outlined(
+      map.get($key, "base"),
       map.get($key, "dark"),
       map.get($key, "pale"),
       map.get($key, "light"),
       map.get($key, "text"),
-      map.get($key, "box-shadow"));
+      map.get($key, "box-shadow")
+    );
 
     &:active,
     &.active {
@@ -106,7 +108,7 @@ $key in $button-colors {
       box-shadow: 0 0 0 0.1rem var(--#{$prefix}btn-focus-border-color);
     }
 
-    @if ($value =="tertiary") {
+    @if ($value == "tertiary") {
       --#{$prefix}btn-color: #{$gray-700};
       --#{$prefix}btn-border-color: #{$gray-500};
 
@@ -131,15 +133,16 @@ $key in $button-colors {
 }
 
 // Ghost Button
-@each $value,
-$key in $button-colors {
+@each $value, $key in $button-colors {
   .btn-ghost-#{$value} {
-    @include mixins.variant-button-ghost(map.get($key, "base"),
+    @include mixins.variant-button-ghost(
+      map.get($key, "base"),
       map.get($key, "dark"),
       map.get($key, "light"),
-      map.get($key, "box-shadow"));
+      map.get($key, "box-shadow")
+    );
 
-    @if ($value =="tertiary") {
+    @if ($value == "tertiary") {
       --#{$prefix}btn-color: #{$gray-800};
 
       &:hover,

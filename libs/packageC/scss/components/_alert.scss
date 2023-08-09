@@ -11,7 +11,8 @@
   overflow: hidden;
   color: var(--#{$prefix}body-color);
   border-color: var(--#{$prefix}alert-border-color);
-  border-left: $alert-left-border-width solid var(--#{$prefix}alert-border-left-color);
+  border-left: $alert-left-border-width solid
+    var(--#{$prefix}alert-border-left-color);
 
   svg {
     color: var(--#{$prefix}alert-color);
