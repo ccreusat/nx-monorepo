@@ -1,3 +1,5 @@
+@use "sass:map";
+
 /* Color System */
 $white: #fff !default;
 $black: #000 !default;
@@ -15,9 +17,9 @@ $gray-900: $black !default;
 
 /* Complementary Colors */
 $blue: #2a9cc8 !default;
-$indigo: #1a22a2 !default;
-$purple: #763294 !default;
-$pink: #b930a2 !default;
+$indigo: #2029b6 !default;
+$purple: #823aa1 !default;
+$pink: #c232aa !default;
 $red: #e13a3a !default;
 $orange: #ff8d2e !default;
 $yellow: #ecbe30 !default;
@@ -26,52 +28,58 @@ $teal: #20c997 !default;
 $cyan: #0dcaf0 !default;
 
 /* Pale, Light and Dark Palette */
-$blue-200: #e4f4ff !default;
-$blue-300: #aadaed !default;
+$blue-200: #e5f5ff !default;
+$blue-300: #b9e3f8 !default;
 $blue-500: $blue !default;
-$blue-800: #1b84ac !default;
+$blue-800: #2f7ea7 !default;
+$blue-900: #005A8A !default;
 
 /* Pale, Light and Dark Palette */
-$indigo-200: #dde8fd !default;
-$indigo-300: #9297e5 !default;
+$indigo-200: #e5eeff !default;
+$indigo-300: #c6c9fb !default;
 $indigo-500: $indigo !default;
 $indigo-800: #121982 !default;
 
 /* Pale, Light and Dark Palette */
-$purple-200: #f4eaf9 !default;
-$purple-300: #e4f4ff !default;
+$purple-200: #f6ecf9 !default;
+$purple-300: #dbbfe3 !default;
 $purple-500: $purple !default;
-$purple-800: #e7f5f4 !default;
+$purple-800: #5d1d79 !default;
+$purple-900: #550070 !default;
 
 /* Pale, Light and Dark Palette */
-$pink-200: #ffe5fb !default;
-$pink-300: #e39cd7 !default;
+$pink-200: #ffebfc !default;
+$pink-300: #f9beef !default;
 $pink-500: $pink !default;
 $pink-800: #9c2288 !default;
 
 /* Pale, Light and Dark Palette */
-$red-200: #ffd9d9 !default;
-$red-300: #f48a8a !default;
+$red-200: #ffecee !default;
+$red-300: #ffadb9 !default;
 $red-500: $red !default;
-$red-800: #c82222 !default;
+$red-800: #c6253b !default;
+$red-900: #9E0016 !default;
 
 /* Pale, Light and Dark Palette */
 $orange-200: #ffefe3 !default;
-$orange-300: #ffc696 !default;
+$orange-300: #FFCBA0  !default;
 $orange-500: $orange !default;
-$orange-800: #f17a17 !default;
+$orange-800: #da6a0b !default;
+$orange-900: #9E4800 !default;
 
 /* Pale, Light and Dark Palette */
-$yellow-200: #fff4d1 !default;
-$yellow-300: #f6de94 !default;
+$yellow-200: #fcf7de !default;
+$yellow-300: #faea9c !default;
 $yellow-500: $yellow !default;
-$yellow-800: #daa910 !default;
+$yellow-800: #d1af00 !default;
+$yellow-900: #A89400 !default;
 
 /* Pale, Light and Dark Palette */
-$green-200: #e7f5f4 !default;
-$green-300: #a2e0d8 !default;
+$green-200: #e6f9f8 !default;
+$green-300: #b6ede5 !default;
 $green-500: $green !default;
-$green-800: #33a797 !default;
+$green-800: #058f7d !default;
+$green-900: #2E6105 !default;
 
 /* Main actions Colors */
 $primary: $orange !default;
@@ -112,26 +120,39 @@ $info-300: #acd6e6 !default;
 $info-800: #3499bf !default;
 
 $support-colors: (
-  "success": (base: $success,
-  pale: $success-200,
-  light: $success-300,
-  dark: $success-800,
-),
-"info": (base: $info,
-pale: $info-200,
-light: $info-300,
-dark: $info-800,
-),
-"warning": (base: $warning,
-pale: $warning-200,
-light: $warning-300,
-dark: $warning-800,
-),
-"danger": (base: $danger,
-pale: $danger-200,
-light: $danger-300,
-dark: $danger-800,
-),
+  "success": (
+    base: $success,
+    pale: $success-200,
+    light: $success-300,
+    dark: $success-800,
+  ),
+  "info": (
+    base: $info,
+    pale: $info-200,
+    light: $info-300,
+    dark: $info-800,
+  ),
+  "warning": (
+    base: $warning,
+    pale: $warning-200,
+    light: $warning-300,
+    dark: $warning-800,
+  ),
+  "danger": (
+    base: $danger,
+    pale: $danger-200,
+    light: $danger-300,
+    dark: $danger-800,
+  ),
+) !default;
+
+$accessible-colors: (
+  "accessible-blue": "#648FFF",
+  "accessible-deep-blue": "#785EF0",
+  "accessible-pink": "#DC267F",
+  "accessible-salamander": "#FE6100",
+  "accessible-sunshade": "#FFB000",
+  "accessible-yellow": "#F3EA14"
 ) !default;
 
 $extend-theme-colors: (
@@ -140,11 +161,12 @@ $extend-theme-colors: (
 ) !default;
 
 /* extra colors that we merge to get css vars(); */
-$extra-colors: (
+$vars-colors: (
   "blue-200": $blue-200,
   "blue-300": $blue-300,
   "blue-500": $blue-500,
   "blue-800": $blue-800,
+  "blue-900": $blue-900,
   "indigo-200": $indigo-200,
   "indigo-300": $indigo-300,
   "indigo-500": $indigo-500,
@@ -153,6 +175,7 @@ $extra-colors: (
   "purple-300": $purple-300,
   "purple-500": $purple-500,
   "purple-800": $purple-800,
+  "purple-900": $purple-900,
   "pink-200": $pink-200,
   "pink-300": $pink-300,
   "pink-500": $pink-500,
@@ -161,25 +184,44 @@ $extra-colors: (
   "red-300": $red-300,
   "red-500": $red-500,
   "red-800": $red-800,
+  "red-900": $red-900,
   "orange-200": $orange-200,
   "orange-300": $orange-300,
   "orange-500": $orange-500,
   "orange-800": $orange-800,
+  "orange-900": $orange-900,
   "yellow-200": $yellow-200,
   "yellow-300": $yellow-300,
   "yellow-500": $yellow-500,
   "yellow-800": $yellow-800,
+  "yellow-900": $yellow-900,
   "green-200": $green-200,
   "green-300": $green-300,
   "green-500": $green-500,
   "green-800": $green-800,
+  "green-900": $green-900,
   "primary-200": $primary-200,
   "primary-300": $primary-300,
   "primary-800": $primary-800,
   "secondary-200": $secondary-200,
   "secondary-300": $secondary-300,
   "secondary-800": $secondary-800,
+  "danger": $danger,
   "danger-200": $danger-200,
   "danger-300": $danger-300,
   "danger-800": $danger-800,
+  "warning": $warning,
+  "warning-200": $warning-200,
+  "warning-300": $warning-300,
+  "warning-800": $warning-800,
+  "success": $success,
+  "success-200": $success-200,
+  "success-300": $success-300,
+  "success-800": $success-800,
+  "info": $info,
+  "info-200": $info-200,
+  "info-300": $info-300,
+  "info-800": $info-800,
 ) !default;
+
+$extra-colors: map.merge($accessible-colors, $vars-colors);

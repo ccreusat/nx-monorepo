@@ -1,4 +1,5 @@
 @use "../../../abstracts/" as *;
+@use "../../../vendors/bootstrap";
 
 $navbar-padding-x: $spacer-16;
 $navbar-padding-y: 0;
@@ -9,6 +10,7 @@ $navbar-badge-padding-x: 0.55em;
 $navbar-badge-padding-y: 0.35em;
 $navbar-badge-font-size: 0.55em;
 
+// Header
 .header {
   .container-fluid {
     padding-inline: 0;
@@ -21,7 +23,7 @@ $navbar-badge-font-size: 0.55em;
       position: static;
       background: linear-gradient(180deg, #ffffff 0%, #f0f2f4 100%);
       border-radius: 0 0 $border-radius $border-radius;
-      box-shadow: $box-shadow;
+      box-shadow: var(--#{$prefix}box-shadow);
       margin: 0 auto;
 
       .navbar-nav {
@@ -36,13 +38,13 @@ $navbar-badge-font-size: 0.55em;
 
     &-text {
       padding: 0;
-      color: $primary;
-      font-family: $font-family-primary;
+      color: var(--#{$prefix}primary);
+      font-family: var(--#{$prefix}family-primary);
       font-size: 2.2rem;
     }
 
     &-title {
-      color: $primary;
+      color: var(--#{$prefix}primary);
     }
 
     &-nav {
@@ -83,14 +85,14 @@ $navbar-badge-font-size: 0.55em;
       --#{$prefix}navbar-padding-x: #{$navbar-secondary-padding-x};
       --#{$prefix}navbar-padding-y: #{$navbar-secondary-padding-y};
 
-      @include media-breakpoint-up(md) {
+      @include bootstrap.media-breakpoint-up(md) {
         left: 0;
         background-color: transparent;
       }
 
       .navbar {
         &-collapse {
-          @include media-breakpoint-up(md) {
+          @include bootstrap.media-breakpoint-up(md) {
             padding-top: $spacer-12;
             display: flex;
             align-items: center;
@@ -121,13 +123,13 @@ $navbar-badge-font-size: 0.55em;
             align-items: center;
             padding: 1rem;
             gap: $spacer-8;
-            font-family: $font-family-primary;
+            font-family: var(--#{$prefix}family-primary);
             font-size: 2.4rem;
-            color: $white;
+            color: var(--#{$prefix}white);
             text-decoration: none;
             text-transform: uppercase;
-            background-color: $secondary;
-            border: 2px solid $white;
+            background-color: var(--#{$prefix}secondary);
+            border: 2px solid var(--#{$prefix}white);
             border-radius: $border-radius-lg;
 
             span {
@@ -136,22 +138,23 @@ $navbar-badge-font-size: 0.55em;
             }
 
             &:hover {
-              background-color: $secondary-800;
+              background-color: var(--#{$prefix}secondary-800);
             }
 
-            @include media-breakpoint-up(md) {
+            @include bootstrap.media-breakpoint-up(md) {
               padding: $spacer-8 $spacer-12;
             }
 
             @media (hover: hover) {
-              transition: background 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transition: background 350ms
+                  cubic-bezier(0.25, 0.46, 0.45, 0.94),
                 background 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
             }
           }
         }
       }
 
-      @include media-breakpoint-up(md) {
+      @include bootstrap.media-breakpoint-up(md) {
         position: static;
       }
     }
