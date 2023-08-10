@@ -2,6 +2,9 @@
 @use "../../abstracts/" as *;
 @use "../../vendors/bootstrap";
 
+@use "header";
+@use "buttons";
+
 $container-spacings: (
   "xs": 0,
   "sm": 0,
@@ -51,6 +54,4 @@ $container-spacings: (
     font-family: var(--#{$prefix}family-primary);
   }
 
-  @import "./header/component";
-  @import "./buttons/component";
 }

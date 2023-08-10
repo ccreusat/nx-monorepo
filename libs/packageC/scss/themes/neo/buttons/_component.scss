@@ -93,6 +93,14 @@
 // Ghost Button
 @each $value, $key in $button-colors {
   .btn-ghost-#{$value} {
+    &:hover,
+    &.hover,
+    &:focus-visible {
+      > span {
+        transform: translateY(0);
+      }
+    }
+
     @include mixins.variant-button-ghost(
       map.get($key, "base"),
       map.get($key, "dark"),
@@ -101,11 +109,12 @@
     );
 
     @if ($value == "tertiary") {
-      --#{$prefix}btn-color: var(--#{$prefix}gray-800);
+      --#{$prefix}btn-color: #{$gray-800};
+      --#{$prefix}btn-focus-color: #{$gray-800};
 
       &:hover,
       &.hover {
-        --#{$prefix}btn-hover-color: var(--#{$prefix}gray-800);
+        --#{$prefix}btn-hover-color: #{$gray-800};
       }
 
       &:first-child:active,
@@ -116,10 +125,8 @@
 
       &:disabled,
       &.disabled {
-        --#{$prefix}btn-disabled-color: var(--#{$prefix}gray-500);
+        --#{$prefix}btn-disabled-color: #{$gray-800};
       }
     }
   }
 }
-
-// }

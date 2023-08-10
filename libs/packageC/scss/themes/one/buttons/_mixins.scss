@@ -61,35 +61,32 @@
   $light: var(--#{$prefix}primary-300),
   $box-shadow: transparent
 ) {
-  --#{$prefix}btn-active-bg: transparent;
+  --#{$prefix}btn-active-bg: #{$gray-300};
   --#{$prefix}btn-active-border-color: transparent;
   --#{$prefix}btn-active-box-shadow-color: transparent;
   --#{$prefix}btn-active-color: #{$dark};
   --#{$prefix}btn-bg: transparent;
   --#{$prefix}btn-border-color: transparent;
-  --#{$prefix}btn-border-width: 0;
+  --#{$prefix}btn-border-width: 0.1rem;
   --#{$prefix}btn-color: #{$color};
   --#{$prefix}btn-disabled-bg: transparent;
   --#{$prefix}btn-disabled-border-color: transparent;
   --#{$prefix}btn-disabled-color: #{$light};
   --#{$prefix}btn-disabled-opacity: 1;
-  --#{$prefix}btn-focus-bg: transparent;
-  --#{$prefix}btn-focus-border-color: transparent;
+  --#{$prefix}btn-focus-bg: #{$gray-200};
+  --#{$prefix}btn-focus-border-color: #{$gray-300};
   --#{$prefix}btn-focus-box-shadow-color: transparent;
   --#{$prefix}btn-focus-color: #{$color};
   --#{$prefix}btn-font-family: #{$btn-font-family};
   --#{$prefix}btn-font-size: 1.6rem;
   --#{$prefix}btn-font-weight: 700;
-  --#{$prefix}btn-hover-bg: transparent;
+  --#{$prefix}btn-hover-bg: #{$gray-200};
   --#{$prefix}btn-hover-border-color: transparent;
   --#{$prefix}btn-hover-color: #{$dark};
   --#{$prefix}btn-line-height: 1;
   --#{$prefix}btn-font-family: var(--#{$prefix}font-sans-serif);
+  --#{$prefix}btn-padding-y: 1rem;
 
   text-transform: none;
-
-  &:hover,
-  &.hover {
-    --#{$prefix}btn-border-width: 0;
-  }
 }
+

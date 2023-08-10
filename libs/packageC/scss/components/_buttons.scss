@@ -61,6 +61,7 @@
   }
 
   &:not(.btn-icon):focus-visible {
+    color: var(--#{$prefix}btn-focus-color);
     background-color: var(--#{$prefix}btn-focus-bg);
     border-color: var(--#{$prefix}btn-focus-border-color);
     box-shadow: none;
