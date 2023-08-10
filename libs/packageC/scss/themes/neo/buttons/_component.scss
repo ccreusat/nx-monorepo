@@ -93,7 +93,7 @@
 // Ghost Button
 @each $value, $key in $button-colors {
   .btn-ghost-#{$value} {
-    height: var(--#{$prefix}btn-height);
+    
     &:hover,
     &.hover,
     &:focus-visible {
@@ -127,6 +127,11 @@
       &:disabled,
       &.disabled {
         --#{$prefix}btn-disabled-color: #{$gray-800};
+      }
+      
+      &[state="selected"],
+      &.is-selected {
+        background-color:var(--#{prefix}secondary-200);
       }
     }
   }

@@ -1,0 +1,19 @@
+@use "../../abstracts/" as *;
+
+.widget {
+    &-image {
+        background-color: var(--#{$prefix}green-200);
+    }
+    
+    &-video {
+        background-color: var(--#{$prefix}purple-200);
+    }
+    
+    &-audio {
+        background-color: var(--#{$prefix}red-200);
+    }
+    
+    &-attachment {
+        background-color: var(--#{$prefix}yellow-200);
+    }
+}
