@@ -93,6 +93,7 @@
 // Ghost Button
 @each $value, $key in $button-colors {
   .btn-ghost-#{$value} {
+    height: var(--#{$prefix}btn-height);
     &:hover,
     &.hover,
     &:focus-visible {

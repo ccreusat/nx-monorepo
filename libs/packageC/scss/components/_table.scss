@@ -1,0 +1,8 @@
+@use "../abstracts/" as *;
+@use "../vendors/bootstrap";
+
+.table {
+  thead {
+    --#{$prefix}table-color: #fff;
+  }
+}

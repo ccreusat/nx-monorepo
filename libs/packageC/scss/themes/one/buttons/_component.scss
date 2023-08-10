@@ -136,6 +136,15 @@
 // Ghost Button
 @each $value, $key in $button-colors {
   .btn-ghost-#{$value} {
+    height: var(--#{$prefix}btn-height);
+    
+      &:hover,
+      &.hover {
+      &:not(.btn-search) {
+        transform: translateY(0);
+      }
+    }
+
     @include mixins.variant-button-ghost(
       map.get($key, "base"),
       map.get($key, "dark"),
