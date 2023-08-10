@@ -14,7 +14,7 @@
 
   [data-product="one"] & {
     --#{$prefix}container-width: 100%;
-    
+
     max-width: map.get($container-max-widths, "xxl");
     width: var(--#{$prefix}container-width);
 
