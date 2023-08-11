@@ -131,7 +131,7 @@
       
       &[state="selected"],
       &.is-selected {
-        background-color:var(--#{prefix}secondary-200);
+        background-color:var(--#{$prefix}secondary-200);
       }
     }
   }
