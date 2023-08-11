@@ -11,6 +11,30 @@ git clone https://github.com/opendigitaleducation/edifice-bootstrap.git
 pnpm install
 ```
 
+## Build
+
+```
+pnpm build
+```
+
+## Dev
+
+### Watch + Storybook
+
+Watch styles to `edifice-ui` when developing on Storybook.
+
+```
+pnpm watch:react
+```
+
+### Watch + SB
+
+Watch styles to `ode-dev-server` when local develop.
+
+```
+pnpm watch:sb
+```
+
 ## Bootstrap 5.x
 
 If a component already exists in Bootstrap 5.x, we use it and override it if necessary. The same goes for utility classes.
