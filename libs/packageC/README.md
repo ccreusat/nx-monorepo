@@ -81,3 +81,13 @@ Overring style should be done in component file with data-attribute selector `[d
   --#{$prefix}input-focus-border-color: var(--#{$prefix}color);
 }
 ```
+
+### Push Force
+
+`git push --force` is not recommended!
+
+```
+After a git history rewrite due to a git push --force, the git tags and notes referencing the commits that were rewritten are lost.
+```
+
+If it happens, read this troubleshooting section: [Troubleshooting](https://semantic-release.gitbook.io/semantic-release/support/troubleshooting#release-not-found-release-branch-after-git-push-force)
