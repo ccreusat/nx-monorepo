@@ -1,5 +1,6 @@
 @use "../../abstracts/" as *;
 
+/* use as optional class for multimedia extension */
 .widget {
     &-image {
         background-color: var(--#{$prefix}green-200);
