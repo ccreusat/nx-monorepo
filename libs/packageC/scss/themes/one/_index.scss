@@ -48,12 +48,9 @@ $container-spacings: (
       min-width: 768px;
     }
 
-    @each $key,
-    $breakpoint in $grid-breakpoints {
+    @each $key, $breakpoint in $grid-breakpoints {
       @include bootstrap.media-breakpoint-up($breakpoint) {
-
-        @each $value,
-        $spacing in $container-spacings {
+        @each $value, $spacing in $container-spacings {
           @if $key ==$value {
             --#{$prefix}container-width: calc(100% - #{$spacing} * 2);
           }
@@ -214,7 +211,8 @@ $container-spacings: (
               }
 
               @media (hover: hover) {
-                transition: background 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transition: background 350ms
+                    cubic-bezier(0.25, 0.46, 0.45, 0.94),
                   background 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
               }
             }

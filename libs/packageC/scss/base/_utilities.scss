@@ -3,47 +3,58 @@
 
 $utilities: map.merge(
   bootstrap.$utilities,
-  ("color": (property: color,
-  class: text,
-  local-vars: ("text-opacity": 1,
-),
-values: map.merge(
-  bootstrap.$utilities-text-colors,
-  ("gray-700": var(--#{vars.$prefix}gray-700),
-  "blue": var(--#{vars.$prefix}blue),
-  "muted": bootstrap.$text-muted,
-  "black-50": rgba(var(--#{vars.$prefix}black), 0.5),
-  "white-50": rgba(var(--#{vars.$prefix}white), 0.5),
-  "reset": inherit,
-)
-),
-),
-"cursor": (property: cursor,
-class: c,
-values: auto pointer grab,
-),
-"width": (property: width,
-class: w,
-values: map.merge(vars.$width-sizing, bootstrap.$spacers),
-),
-"max-width": (property: max-width,
-class: max-w,
-values: (full: 100%,
-64: 64px,
-96: 96px,
-128: 128px,
-256: 256px,
-384: 384px,
-512: 512px,
-auto: auto,
-),
-),
-"height": (property: height,
-class: h,
-values: map.merge(
-bootstrap.$spacers,
-(1\/4: 25%, 1\/2: 50%, 3\/4: 75%, full: 100%, auto: auto)
-),
-),
-)
+  (
+    "color": (
+      property: color,
+      class: text,
+      local-vars: (
+        "text-opacity": 1,
+      ),
+      values:
+        map.merge(
+          bootstrap.$utilities-text-colors,
+          (
+            "gray-700": var(--#{vars.$prefix}gray-700),
+            "blue": var(--#{vars.$prefix}blue),
+            "muted": bootstrap.$text-muted,
+            "black-50": rgba(var(--#{vars.$prefix}black), 0.5),
+            "white-50": rgba(var(--#{vars.$prefix}white), 0.5),
+            "reset": inherit,
+          )
+        ),
+    ),
+    "cursor": (
+      property: cursor,
+      class: c,
+      values: auto pointer grab,
+    ),
+    "width": (
+      property: width,
+      class: w,
+      values: map.merge(vars.$width-sizing, bootstrap.$spacers),
+    ),
+    "max-width": (
+      property: max-width,
+      class: max-w,
+      values: (
+        full: 100%,
+        64: 64px,
+        96: 96px,
+        128: 128px,
+        256: 256px,
+        384: 384px,
+        512: 512px,
+        auto: auto,
+      ),
+    ),
+    "height": (
+      property: height,
+      class: h,
+      values:
+        map.merge(
+          bootstrap.$spacers,
+          (1\/4: 25%, 1\/2: 50%, 3\/4: 75%, full: 100%, auto: auto)
+        ),
+    ),
+  )
 );
