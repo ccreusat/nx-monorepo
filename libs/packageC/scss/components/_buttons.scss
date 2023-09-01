@@ -9,10 +9,6 @@
   --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
   --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
   --#{$prefix}btn-display-mode: #{$btn-display-mode};
-  --#{$prefix}btn-focus-bg: var(--#{$prefix}primary);
-  --#{$prefix}btn-focus-border-color: var(--#{$prefix}orange-300);
-  --#{$prefix}btn-focus-box-shadow-color: #{$btn-box-shadow};
-  --#{$prefix}btn-focus-color: var(--#{$prefix}white);
   --#{$prefix}btn-font-family: #{$btn-font-family};
   --#{$prefix}btn-font-size: #{$btn-font-size};
   --#{$prefix}btn-font-weight: #{$btn-font-weight};
@@ -61,9 +57,9 @@
   }
 
   &:not(.btn-icon):focus-visible {
-    color: var(--#{$prefix}btn-focus-color);
-    background-color: var(--#{$prefix}btn-focus-bg);
-    border-color: var(--#{$prefix}btn-focus-border-color);
+    color: var(--#{$prefix}btn-hover-color);
+    background-color: var(--#{$prefix}btn-hover-bg);
+    border-color: var(--#{$prefix}btn-hover-border-color);
     box-shadow: none;
   }
 
