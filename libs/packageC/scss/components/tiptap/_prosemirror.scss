@@ -2,4 +2,9 @@
     &-focused {
         outline: none;
     }
+
+    .mark,
+    mark {
+        padding-inline: 0;
+    }
 }
