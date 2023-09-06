@@ -351,3 +351,10 @@ $dropdown-divider-margin-y: 0;
 
 // Borders Sass variables
 $border-color: $gray-400 !default;
+
+//Attachment
+$attachment-border-color: $gray-400 !default;
+$attachment-border-color-focus: $gray-600 !default;
+$attachment-border-color-active: $gray-800 !default;
+$attachment-background-color: $white !default;
+$attachment-border-width: 0.1rem;
