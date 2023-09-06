@@ -24,7 +24,8 @@
   }
 
   .options {
-    border-left: solid var(--#{$prefix}attachment-border-width) var(--#{$prefix}attachment-border-color);
+    border-left: solid var(--#{$prefix}attachment-border-width)
+      var(--#{$prefix}attachment-border-color);
     display: flex;
     align-items: center;
   }
