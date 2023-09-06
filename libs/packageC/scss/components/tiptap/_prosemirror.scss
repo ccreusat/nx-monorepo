@@ -7,4 +7,9 @@
     mark {
         padding-inline: 0;
     }
+
+    /* Headers should use inherited font family. */ 
+    :where(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6) {
+        font-family: inherit;
+    }
 }
