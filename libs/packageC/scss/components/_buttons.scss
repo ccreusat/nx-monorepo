@@ -115,6 +115,10 @@
     color: var(--#{$prefix}gray-800);
     background-color: var(--#{$prefix}btn-search-bg);
 
+    @include data-product("one") {
+      --#{$prefix}btn-border-color: var(--#{$prefix}gray-400);
+    }
+
     svg {
       width: $btn-search-icon-size;
       min-width: $btn-search-icon-size;
