@@ -10,9 +10,15 @@
         padding-inline: 0;
     }
 
-    /* Headers should use inherited font family and text transformation. */
-    :where(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6) {
+    /* Headers should use inherited font family and text transformation.*/
+    :where(h1, h2, h3, .h1, .h2, .h3) {
         font-family: inherit;
+        font-weight: 700;
+        text-transform: inherit;
+    }
+    :where(h4, h5, h6, .h4, .h5, .h6) {
+        font-family: inherit;
+        font-weight: inherit;
         text-transform: inherit;
     }
 }
