@@ -101,6 +101,7 @@ $container-padding-x: 3.2rem !default;
 /* Gutter Grid CSS */
 $grid-gutter-width: 2.4rem !default;
 
+/* Enable Options */
 $enable-negative-margins: true !default;
 $enable-rfs: false !default;
 $enable-cssgrid: true !default;
@@ -210,8 +211,16 @@ $form-check-input-indeterminate-color: $white !default;
 $form-check-input-indeterminate-bg-color: var(--#{$prefix}secondary) !default;
 
 /* Dropdowns */
+$dropdown-padding-y: 0;
+$dropdown-font-size: $spacer-12;
+$dropdown-padding-y: 0;
+$dropdown-padding-x: 0;
+$dropdown-border-width: 0;
+$dropdown-box-shadow: none;
+$dropdown-bg: transparent;
+$dropdown-divider-margin-y: 0;
+
 $dropdown-link-color: $gray-700 !default;
-// $dropdown-link-hover-color: darken($gray-900, 5%) !default;
 $dropdown-link-hover-color: color.adjust($gray-900, $lightness: -5%) !default;
 $dropdown-link-hover-bg: rgba($secondary, 0.1) !default;
 
@@ -340,15 +349,6 @@ $navbar-badge-padding-x: 0.55em;
 $navbar-badge-padding-y: 0.35em;
 $navbar-badge-font-size: 0.55em;
 
-$dropdown-padding-y: 0;
-$dropdown-font-size: $spacer-12;
-$dropdown-padding-y: 0;
-$dropdown-padding-x: 0;
-$dropdown-border-width: 0;
-$dropdown-box-shadow: none;
-$dropdown-bg: transparent;
-$dropdown-divider-margin-y: 0;
-
 // Borders Sass variables
 $border-color: $gray-400 !default;
 
@@ -358,3 +358,14 @@ $attachment-border-color-focus: $gray-600 !default;
 $attachment-border-color-active: $gray-800 !default;
 $attachment-background-color: $white !default;
 $attachment-border-width: 0.1rem;
+
+//Tabs
+$tabs-border-width: 0.1rem !default;
+$tabs-gap: 0.8rem !default;
+$tabs-svg-size: 2rem !default;
+
+// Nav Tabs
+$nav-link-padding-y: $spacer-12;
+$nav-link-padding-x: $spacer-12;
+$nav-link-color: $gray-800;
+$nav-link-hover-color: $gray-800;
