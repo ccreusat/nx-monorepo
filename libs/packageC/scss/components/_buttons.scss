@@ -160,4 +160,13 @@
       background-color: transparent;
     }
   }
+
+  @each $value, $key in $button-colors {
+    &.btn-ghost-#{$value} {
+      &:focus-visible {
+        outline: 2px solid var(--#{$prefix}secondary);
+        outline-offset: -1px;
+      } 
+    }
+  }
 }
