@@ -1,0 +1,12 @@
+@use "../abstracts/" as *;
+@use "../vendors/bootstrap";
+
+$workspace-search-bg: $gray-200 !default;
+
+.workspace {
+  --#{$prefix}workspace-search-bg: #{$workspace-search-bg};
+
+  .search {
+    background-color: var(--#{$prefix}workspace-search-bg);
+  }
+}
