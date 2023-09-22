@@ -216,13 +216,17 @@ $form-check-input-indeterminate-border-color: var(
 ) !default;
 
 /* Dropdowns */
-$dropdown-link-color: $gray-700 !default;
-$dropdown-link-hover-color: color.adjust($gray-900, $lightness: -5%) !default;
-$dropdown-link-hover-bg: rgba($secondary, 0.1) !default;
-
-/* Dropdowns custom */
-$dropdowntrigger-selected-border-color: var(--#{$prefix}secondary-300) !default;
-$dropdowntrigger-selected-bg-color: var(--#{$prefix}secondary-200) !default;
+$dropdown-border-color: var(--#{$prefix}border-color-translucent);
+$dropdown-padding-y: 0;
+$dropdown-link-active-bg: $gray-300;
+$dropdown-link-active-color: $gray-800;
+$dropdown-link-hover-bg: $gray-200;
+$dropdown-border-width: 0;
+$dropdown-font-size: 1.6rem;
+$dropdown-item-padding-y: $spacer-8;
+$dropdown-item-padding-x: $spacer-12;
+$dropdown-toggle-selected-border-color: var(--#{$prefix}secondary-300) !default;
+$dropdown-toggle-selected-bg-color: var(--#{$prefix}secondary-200) !default;
 
 /* Image thumbnails */
 $thumbnail-bg: $white !default;
@@ -341,12 +345,3 @@ $navbar-padding-y: 0;
 $navbar-badge-padding-x: 0.55em;
 $navbar-badge-padding-y: 0.35em;
 $navbar-badge-font-size: 0.55em;
-
-$dropdown-padding-y: 0;
-$dropdown-font-size: $spacer-12;
-$dropdown-padding-y: 0;
-$dropdown-padding-x: 0;
-$dropdown-border-width: 0;
-$dropdown-box-shadow: none;
-$dropdown-bg: transparent;
-$dropdown-divider-margin-y: 0;
