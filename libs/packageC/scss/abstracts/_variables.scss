@@ -204,7 +204,8 @@ $focus-ring-width: 0.4rem !default;
 $focus-ring-color: var(--#{$prefix}secondary-200) !default;
 
 /* Forms check */
-$form-check-input-width: 1.25em;
+$form-check-input-width: 2rem;
+$form-check-padding-start: 0;
 $form-check-input-checked-bg-color: var(--#{$prefix}secondary) !default;
 $form-check-input-checked-border-color: var(--#{$prefix}secondary) !default;
 $form-check-input-focus-border: var(--#{$prefix}secondary-800) !default;
