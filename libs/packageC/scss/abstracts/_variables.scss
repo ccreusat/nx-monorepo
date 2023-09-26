@@ -201,14 +201,22 @@ $input-filled-border-color: $gray-600 !default;
 $input-border-radius: $border-radius-lg !default;
 $input-border-radius-sm: $border-radius !default;
 $input-border-radius-lg: $border-radius-lg !default;
+
+$focus-ring-width: 0.4rem !default;
 $focus-ring-color: var(--#{$prefix}secondary-200) !default;
 
 /* Forms check */
+$form-check-input-width: 2rem;
+$form-check-padding-start: 0;
 $form-check-input-checked-bg-color: var(--#{$prefix}secondary) !default;
 $form-check-input-checked-border-color: var(--#{$prefix}secondary) !default;
-$form-check-input-focus-border: var(--#{$prefix}secondary-300) !default;
-$form-check-input-indeterminate-color: $white !default;
+$form-check-input-focus-border: var(--#{$prefix}secondary-800) !default;
+
 $form-check-input-indeterminate-bg-color: var(--#{$prefix}secondary) !default;
+$form-check-input-indeterminate-bg-color: var(--#{$prefix}secondary) !default;
+$form-check-input-indeterminate-border-color: var(
+  --#{$prefix}secondary
+) !default;
 
 /* Dropdowns */
 $dropdown-padding-y: 0;
@@ -341,9 +349,6 @@ $navbar-brand-padding-y: 0;
 $navbar-brand-padding-x: 0;
 $navbar-brand-margin-end: 0;
 $navbar-padding-y: 0;
-
-$navbar-color-100: var(--#{$prefix}info);
-$navbar-color-200: var(--#{$prefix}secondary);
 
 $navbar-badge-padding-x: 0.55em;
 $navbar-badge-padding-y: 0.35em;
