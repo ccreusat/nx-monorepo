@@ -108,6 +108,8 @@
       .dropdown-menu {
         --#{$prefix}dropdown-padding-y: #{$dropdown-padding-y};
         --#{$prefix}dropdown-font-size: #{$dropdown-font-size};
+        --#{$prefix}dropdown-bg: #{$white};
+
         position: absolute;
 
         .icon {
