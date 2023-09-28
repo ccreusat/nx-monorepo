@@ -1,10 +1,12 @@
 @use "../../../abstracts/" as *;
 
-@mixin variant-button-filled($color: $primary,
+@mixin variant-button-filled(
+  $color: $primary,
   $dark: $primary-800,
   $light: $primary-300,
   $text: $white,
-  $box-shadow: transparent) {
+  $box-shadow: transparent
+) {
   --#{$prefix}btn-active-bg: #{$dark};
   --#{$prefix}btn-active-border-color: #{$light};
   --#{$prefix}btn-active-box-shadow-color: #{$box-shadow};
@@ -24,11 +26,13 @@
   --#{$prefix}btn-hover-color: #{$text};
 }
 
-@mixin variant-button-outlined($color: $primary,
+@mixin variant-button-outlined(
+  $color: $primary,
   $dark: $primary-800,
   $pale: $primary-200,
   $light: $primary-300,
-  $box-shadow: transparent) {
+  $box-shadow: transparent
+) {
   --#{$prefix}btn-active-bg: #{$pale};
   --#{$prefix}btn-active-border-color: #{$dark};
   --#{$prefix}btn-active-box-shadow-color: transparent;
@@ -52,10 +56,12 @@
   --#{$prefix}btn-active-box-shadow-width: 0;
 }
 
-@mixin variant-button-ghost($color: $primary,
+@mixin variant-button-ghost(
+  $color: $primary,
   $dark: $primary-800,
   $light: $primary-300,
-  $box-shadow: transparent) {
+  $box-shadow: transparent
+) {
   --#{$prefix}btn-active-bg: transparent;
   --#{$prefix}btn-active-border-color: transparent;
   --#{$prefix}btn-active-box-shadow-color: transparent;

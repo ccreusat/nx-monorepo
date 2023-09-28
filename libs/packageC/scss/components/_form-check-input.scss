@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+.form-check-input {
+  --#{$prefix}border-width: 0.2rem;
+
+  &:focus {
+    background-color: var(--edifice-secondary-200);
+  }
+
+  &:focus:checked {
+    background-color: var(--#{$prefix}secondary-800);
+    border-color: var(--#{$prefix}secondary-800);
+    color: var(--#{$prefix}secondary-800);
+  }
+
+  &[type="radio"] {
+    &:checked {
+      background-size: 1.6rem;
+    }
+  }
+}

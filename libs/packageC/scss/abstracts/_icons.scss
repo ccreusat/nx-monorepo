@@ -77,6 +77,10 @@ $icons-applications: (
     "neo": $green,
     "one": $green,
   ),
+  "edt": (
+    "neo": $indigo,
+    "one": $blue,
+  ),
   "exercizer": (
     "neo": $purple,
     "one": $purple,
@@ -239,7 +243,7 @@ $icons-applications: (
   ),
   "placeholder": (
     "neo": $secondary,
-    "one": $secondary,
+    "one": $primary,
   ),
 ) !default;
 

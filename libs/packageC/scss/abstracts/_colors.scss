@@ -77,7 +77,7 @@ $green-800: #33a797 !default;
 $primary: $orange !default;
 $secondary: $blue !default;
 $tertiary: $gray-300 !default;
-$light: $gray-300 !default;
+$light: $gray-200 !default;
 $medium: $gray-500 !default;
 $dark: $gray-800 !default;
 
@@ -112,26 +112,30 @@ $info-300: #acd6e6 !default;
 $info-800: #3499bf !default;
 
 $support-colors: (
-  "success": (base: $success,
-  pale: $success-200,
-  light: $success-300,
-  dark: $success-800,
-),
-"info": (base: $info,
-pale: $info-200,
-light: $info-300,
-dark: $info-800,
-),
-"warning": (base: $warning,
-pale: $warning-200,
-light: $warning-300,
-dark: $warning-800,
-),
-"danger": (base: $danger,
-pale: $danger-200,
-light: $danger-300,
-dark: $danger-800,
-),
+  "success": (
+    base: $success,
+    pale: $success-200,
+    light: $success-300,
+    dark: $success-800,
+  ),
+  "info": (
+    base: $info,
+    pale: $info-200,
+    light: $info-300,
+    dark: $info-800,
+  ),
+  "warning": (
+    base: $warning,
+    pale: $warning-200,
+    light: $warning-300,
+    dark: $warning-800,
+  ),
+  "danger": (
+    base: $danger,
+    pale: $danger-200,
+    light: $danger-300,
+    dark: $danger-800,
+  ),
 ) !default;
 
 $extend-theme-colors: (

@@ -4,15 +4,15 @@
 
 .alert {
   --#{$prefix}alert-border-left-color: var(--#{prefix}gray-800);
-  --#{$prefix}alert-bg: var(--#{prefix}white);
+  --#{$prefix}alert-bg: #{$white};
 
   display: flex;
   align-items: center;
   overflow: hidden;
   color: var(--#{$prefix}body-color);
-  background-color: var(--#{$prefix}alert-bg);
   border-color: var(--#{$prefix}alert-border-color);
-  border-left: $alert-left-border-width solid var(--#{$prefix}alert-border-left-color);
+  border-left: $alert-left-border-width solid
+    var(--#{$prefix}alert-border-left-color);
 
   svg {
     color: var(--#{$prefix}alert-color);
@@ -46,8 +46,7 @@
   }
 }
 
-@each $state,
-  $key in $support-colors {
+@each $state, $key in $support-colors {
   .alert-#{$state} {
     --#{$prefix}alert-color: #{map.get($key, "base")};
     --#{$prefix}alert-border-color: #{map.get($key, "pale")};

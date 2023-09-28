@@ -35,44 +35,58 @@ $theme-colors: map.merge($theme-colors, $extend-theme-colors);
 // Utilities merge
 $utilities: map.merge(
   $utilities,
-  ("shadow": map.merge(
-    map.get($utilities, "shadow"),
-    (values: map.merge(
-      map.get(map.get($utilities, "shadow"), "values"),
-      (hover: $box-shadow-hover,
-      bottom: $box-shadow-bottom,
-    )
-  ),
-)
-),
-"color": map.merge(
-map.get($utilities, "color"),
-(values: map.merge(
-  map.get(map.get($utilities, "color"), "values"),
-  ("gray-700": $gray-700,
-  "blue": $blue,
-  "muted": $text-muted,
-  "black-50": rgba($black, 0.5),
-  "white-50": rgba($black, 0.5),
-  "reset": inherit,
-)
-),
-)
-),
-"height": map.merge(
-map.get($utilities, "height"),
-(values: map.merge(
-map.get(map.get($utilities, "height"), "values"),
-(1\/4: 25%, 1\/2: 50%, 3\/4: 75%, full: 100%, auto: auto)
-),
-)
-),
-"width": map.merge(
-map.get($utilities, "width"),
-(values: map.merge($width-sizing, $spacers),
-)
-),
-)
+  (
+    "shadow":
+      map.merge(
+        map.get($utilities, "shadow"),
+        (
+          values:
+            map.merge(
+              map.get(map.get($utilities, "shadow"), "values"),
+              (
+                hover: $box-shadow-hover,
+                bottom: $box-shadow-bottom,
+              )
+            ),
+        )
+      ),
+    "color":
+      map.merge(
+        map.get($utilities, "color"),
+        (
+          values:
+            map.merge(
+              map.get(map.get($utilities, "color"), "values"),
+              (
+                "gray-700": $gray-700,
+                "blue": $blue,
+                "muted": $text-muted,
+                "black-50": rgba($black, 0.5),
+                "white-50": rgba($black, 0.5),
+                "reset": inherit,
+              )
+            ),
+        )
+      ),
+    "height":
+      map.merge(
+        map.get($utilities, "height"),
+        (
+          values:
+            map.merge(
+              map.get(map.get($utilities, "height"), "values"),
+              (1\/4: 25%, 1\/2: 50%, 3\/4: 75%, full: 100%, auto: auto)
+            ),
+        )
+      ),
+    "width":
+      map.merge(
+        map.get($utilities, "width"),
+        (
+          values: map.merge($width-sizing, $spacers),
+        )
+      ),
+  )
 );
 
 @import "./bootstrap/scss/tables";
