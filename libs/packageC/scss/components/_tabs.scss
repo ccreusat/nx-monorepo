@@ -14,9 +14,11 @@
 .nav-tabs {
   position: relative;
   display: inline-flex;
+  gap: $spacer-24;
 
   .nav-link {
     position: relative;
+    align-items: center;
 
     small {
       position: relative;
@@ -25,10 +27,10 @@
         content: "";
         display: block;
         position: absolute;
-        right: -#{$spacer-12};
+        right: -#{$spacer-24};
         top: 50%;
         transform: translateY(-50%);
-        height: 100%;
+        height: 2rem;
         width: 1px;
         background-color: $gray-400;
       }
@@ -65,6 +67,12 @@
   }
 
   .nav-item {
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+
     &:last-child {
       small {
         &::after {
