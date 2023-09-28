@@ -44,6 +44,42 @@
     padding-inline: var(--#{$prefix}card-spacer-x);
   }
 
+  &-upload {
+    display: flex;
+
+    .card-body {
+      min-width: 20%;
+    }
+
+    .upload-error {
+      color: var(--#{$prefix}danger);
+    }
+
+    .upload-success {
+      color: var(--#{$prefix}success);
+    }
+
+    .loading-color {
+      color: var(--#{$prefix}primary);
+    }
+
+    .action-content {
+      display: flex;
+      height: 36px;
+
+      .status {
+        display: flex;
+        align-items: center;
+      }
+
+      .actions {
+        border-left: solid 1px var(--#{$prefix}gray-600);
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
   &-image {
     flex-shrink: 0;
     width: 8rem;
