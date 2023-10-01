@@ -90,6 +90,10 @@
       display: none;
     }
 
+    .badge {
+      margin-left: auto;
+    }
+
     &-caret {
       margin-left: auto;
       transition: transform 0.2s $default-easing;
