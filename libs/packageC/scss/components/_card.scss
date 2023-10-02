@@ -45,11 +45,23 @@
     padding-inline: var(--#{$prefix}card-spacer-x);
   }
 
+  &-image {
+    flex-shrink: 0;
+    width: 8rem;
+    height: 8rem;
+    overflow: clip;
+    border-radius: $border-radius;
+
+    > img {
+      aspect-ratio: 1 / 1;
+    }
+  }
+
   &-upload {
     display: flex;
     padding: 8px;
 
-    .image-upload {
+    .card-image {
       height: 48px;
       width: 48px;
     }
@@ -93,22 +105,14 @@
     @include bootstrap.media-breakpoint-down(md) {
       padding: 0;
 
-      .image-upload {
+      .card-body {
+        gap: $spacer-8 !important;
+      }
+
+      .card-image {
         height: 36px;
         width: 36px;
       }
-    }
-  }
-
-  &-image {
-    flex-shrink: 0;
-    width: 8rem;
-    height: 8rem;
-    overflow: clip;
-    border-radius: $border-radius;
-
-    > img {
-      aspect-ratio: 1 / 1;
     }
   }
 
