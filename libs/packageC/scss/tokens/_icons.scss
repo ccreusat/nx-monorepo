@@ -2,7 +2,6 @@
 @use "sass:map";
 @use "../abstracts/" as *;
 
-// Classes utilitaires par application
 .color-app {
   //applications
   @each $app, $data in $icons-applications {
