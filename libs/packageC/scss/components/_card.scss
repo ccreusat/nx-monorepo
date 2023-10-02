@@ -1,4 +1,5 @@
 @use "../abstracts/" as *;
+@use "../vendors/bootstrap";
 
 .card {
   --#{$prefix}card-cap-bg: var(--#{$prefix}gray-200);
@@ -46,9 +47,19 @@
 
   &-upload {
     display: flex;
+    padding: 8px;
+
+    .image-upload {
+      height: 48px;
+      width: 48px;
+    }
 
     .card-body {
       min-width: 20%;
+    }
+
+    .text-title {
+      font-size: bootstrap.$small-font-size !important;
     }
 
     .upload-error {
@@ -60,12 +71,12 @@
     }
 
     .loading-color {
-      color: var(--#{$prefix}primary);
+      color: var(--#{$prefix}secondary);
     }
 
     .action-content {
       display: flex;
-      height: 36px;
+      height: 32px;
 
       .status {
         display: flex;
@@ -73,9 +84,18 @@
       }
 
       .actions {
-        border-left: solid 1px var(--#{$prefix}gray-600);
+        border-left: solid 1px var(--#{$prefix}gray-400);
         display: flex;
         align-items: center;
+      }
+    }
+
+    @include bootstrap.media-breakpoint-down(md) {
+      padding: 0;
+
+      .image-upload {
+        height: 36px;
+        width: 36px;
       }
     }
   }
