@@ -60,6 +60,8 @@
   &-upload {
     display: flex;
     padding: 8px;
+    flex-direction: unset;
+    border: hidden;
 
     .card-image {
       height: 48px;
@@ -68,6 +70,10 @@
 
     .card-body {
       min-width: 20%;
+    }
+
+    .card-footer {
+      background-color: unset;
     }
 
     .text-title {
@@ -89,6 +95,12 @@
     .action-content {
       display: flex;
       height: 32px;
+      gap: $spacer-12;
+
+      .btn {
+        position: relative;
+        opacity: 1;
+      }
 
       .status {
         display: flex;
