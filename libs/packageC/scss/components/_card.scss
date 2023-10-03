@@ -89,10 +89,9 @@
   }
 
   &-upload {
-    display: flex;
-    padding: 8px;
     flex-direction: unset;
     border: hidden;
+    padding: $spacer-8;
 
     .card-image {
       height: 48px;
@@ -101,10 +100,12 @@
 
     .card-body {
       min-width: 20%;
+      padding: 0;
     }
 
     .card-footer {
       background-color: unset;
+      padding: 0;
     }
 
     .text-title {
