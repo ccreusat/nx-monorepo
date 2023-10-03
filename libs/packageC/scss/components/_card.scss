@@ -92,6 +92,7 @@
     flex-direction: unset;
     border: hidden;
     padding: $spacer-8;
+    gap: $spacer-12;
 
     .card-image {
       height: 48px;
@@ -110,6 +111,7 @@
 
     .text-title {
       font-size: bootstrap.$small-font-size !important;
+      margin: 0;
     }
 
     .upload-error {
