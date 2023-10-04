@@ -86,6 +86,11 @@ $utilities: map.merge(
           values: map.merge($width-sizing, $spacers),
         )
       ),
+    "cursor": (
+      property: cursor,
+      class: c,
+      values: auto pointer grab,
+    ),
   )
 );
 

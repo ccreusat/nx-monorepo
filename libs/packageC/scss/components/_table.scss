@@ -2,7 +2,9 @@
 @use "../vendors/bootstrap";
 
 .table {
-  thead {
-    --#{$prefix}table-color: #fff;
+  td {
+    .form-check {
+      justify-content: center;
+    }
   }
 }
