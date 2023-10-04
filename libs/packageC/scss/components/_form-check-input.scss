@@ -2,10 +2,13 @@
 
 .form-check {
   padding-left: 0;
+  margin: 0;
+  min-height: auto;
 
   .form-check-input {
     --#{$prefix}border-width: 0.2rem;
 
+    margin-top: 0;
     margin-left: 0;
 
     &:focus {
@@ -21,6 +24,12 @@
     &[type="radio"] {
       &:checked {
         background-size: 1.6rem;
+      }
+    }
+
+    &[type="checkbox"] {
+      &:checked {
+        margin-bottom: 0;
       }
     }
   }
