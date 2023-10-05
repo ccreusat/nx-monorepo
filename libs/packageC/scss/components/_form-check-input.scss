@@ -1,21 +1,36 @@
 @use "../abstracts/" as *;
 
-.form-check-input {
-  --#{$prefix}border-width: 0.2rem;
+.form-check {
+  padding-left: 0;
+  margin: 0;
+  min-height: auto;
 
-  &:focus {
-    background-color: var(--edifice-secondary-200);
-  }
+  .form-check-input {
+    --#{$prefix}border-width: 0.2rem;
 
-  &:focus:checked {
-    background-color: var(--#{$prefix}secondary-800);
-    border-color: var(--#{$prefix}secondary-800);
-    color: var(--#{$prefix}secondary-800);
-  }
+    margin-top: 0;
+    margin-left: 0;
 
-  &[type="radio"] {
-    &:checked {
-      background-size: 1.6rem;
+    &:focus {
+      background-color: var(--edifice-secondary-200);
+    }
+
+    &:focus:checked {
+      background-color: var(--#{$prefix}secondary-800);
+      border-color: var(--#{$prefix}secondary-800);
+      color: var(--#{$prefix}secondary-800);
+    }
+
+    &[type="radio"] {
+      &:checked {
+        background-size: 1.6rem;
+      }
+    }
+
+    &[type="checkbox"] {
+      &:checked {
+        margin-bottom: 0;
+      }
     }
   }
 }

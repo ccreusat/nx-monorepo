@@ -38,6 +38,7 @@
     @include bootstrap.media-breakpoint-up(md) {
       margin-top: $spacer-48;
       margin-bottom: $spacer-48;
+      margin-inline: auto;
     }
 
     @include bootstrap.media-breakpoint-up(lg) {
@@ -56,10 +57,15 @@
           color: var(--#{$prefix}gray-800);
           opacity: 1;
         }
+
+        + .modal-subtitle {
+          margin-top: $spacer-8;
+        }
       }
 
       & > .modal-body {
-        padding: $spacer-32 $spacer-0;
+        margin: $spacer-24 $spacer-0;
+        padding: 0;
       }
 
       & > .modal-footer {
@@ -75,8 +81,13 @@
     &.modal-lg {
       @include bootstrap.media-breakpoint-up(xs) {
         max-width: fit-content;
-        margin-right: auto;
-        margin-left: auto;
+        margin-right: $spacer-16;
+        margin-left: $spacer-16;
+      }
+
+      @include bootstrap.media-breakpoint-up(sm) {
+        margin-right: $spacer-32;
+        margin-left: $spacer-32;
       }
 
       & > .modal-content {
@@ -100,8 +111,8 @@
 
     &.modal-lg {
       @include bootstrap.media-breakpoint-up(md) {
-        margin-right: auto;
-        margin-left: auto;
+        margin-right: $spacer-32;
+        margin-left: $spacer-32;
       }
 
       @include bootstrap.media-breakpoint-up(lg) {

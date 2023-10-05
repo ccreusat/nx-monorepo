@@ -32,3 +32,7 @@ hr {
 .text-secondary {
   color: var(--#{$prefix}secondary) !important;
 }
+
+.text-bg-secondary {
+  background-color: var(--#{$prefix}secondary) !important;
+}
