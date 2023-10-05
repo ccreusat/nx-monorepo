@@ -106,7 +106,7 @@
   }
 
   &.btn-search {
-    --#{$prefix}btn-border-color: var(--#{$prefix}gray-400);
+    --#{$prefix}btn-border-color: var(--#{$prefix}gray-400) !important;
     --#{$prefix}btn-border-width: 0.1rem;
 
     color: var(--#{$prefix}gray-800);

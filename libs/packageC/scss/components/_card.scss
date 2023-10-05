@@ -1,4 +1,5 @@
 @use "../abstracts/" as *;
+@use "../vendors/bootstrap";
 
 .card {
   --#{$prefix}card-cap-bg: var(--#{$prefix}gray-200);
@@ -44,42 +45,6 @@
     padding-inline: var(--#{$prefix}card-spacer-x);
   }
 
-  &-upload {
-    display: flex;
-
-    .card-body {
-      min-width: 20%;
-    }
-
-    .upload-error {
-      color: var(--#{$prefix}danger);
-    }
-
-    .upload-success {
-      color: var(--#{$prefix}success);
-    }
-
-    .loading-color {
-      color: var(--#{$prefix}primary);
-    }
-
-    .action-content {
-      display: flex;
-      height: 36px;
-
-      .status {
-        display: flex;
-        align-items: center;
-      }
-
-      .actions {
-        border-left: solid 1px var(--#{$prefix}gray-600);
-        display: flex;
-        align-items: center;
-      }
-    }
-  }
-
   &-image {
     flex-shrink: 0;
     width: 8rem;
@@ -89,12 +54,6 @@
 
     > img {
       aspect-ratio: 1 / 1;
-    }
-  }
-
-  &-text {
-    em {
-      color: var(--#{$prefix}gray-700);
     }
   }
 
@@ -126,6 +85,86 @@
 
     &:focus-visible {
       opacity: 1;
+    }
+  }
+
+  &-upload {
+    flex-direction: unset;
+    border: hidden;
+    padding: $spacer-8;
+    gap: $spacer-12;
+
+    .card-image {
+      height: 48px;
+      width: 48px;
+    }
+
+    .card-body {
+      min-width: 20%;
+      padding: 0;
+    }
+
+    .card-footer {
+      background-color: unset;
+      padding: 0;
+    }
+
+    .text-title {
+      font-size: bootstrap.$small-font-size !important;
+      margin: 0;
+    }
+
+    .upload-error {
+      color: var(--#{$prefix}danger);
+    }
+
+    .upload-success {
+      color: var(--#{$prefix}success);
+    }
+
+    .loading-color {
+      color: var(--#{$prefix}secondary);
+    }
+
+    .action-content {
+      display: flex;
+      height: 32px;
+      gap: $spacer-12;
+
+      .btn {
+        position: relative;
+        opacity: 1;
+      }
+
+      .status {
+        display: flex;
+        align-items: center;
+      }
+
+      .actions {
+        border-left: solid 1px var(--#{$prefix}gray-400);
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    @include bootstrap.media-breakpoint-down(md) {
+      padding: 0;
+
+      .card-body {
+        gap: $spacer-8 !important;
+      }
+
+      .card-image {
+        height: 36px;
+        width: 36px;
+      }
+    }
+  }
+
+  &-text {
+    em {
+      color: var(--#{$prefix}gray-700);
     }
   }
 
