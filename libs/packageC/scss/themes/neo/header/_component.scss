@@ -121,6 +121,7 @@
           border-radius: $border-radius !important;
           gap: $spacer-8;
           font-size: 1.2rem;
+          width: 100%;
 
           @include bootstrap.media-breakpoint-up(md) {
             border-radius: 0 !important;
@@ -165,6 +166,7 @@
           padding: 0;
           border-radius: 0;
           border: 0;
+          box-shadow: none;
 
           .icon {
             color: var(--#{$prefix}white);

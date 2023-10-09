@@ -20,6 +20,7 @@
       outline: none;
     }
 
+    &:hover,
     &.focus,
     &:focus-visible {
       outline: none;
@@ -51,21 +52,10 @@
     display: flex;
     flex-direction: column;
     gap: $spacer-4;
-
-    /* > .dropdown-item {
-      &:first-child {
-        border-top-right-radius: var(--#{$prefix}dropdown-item-border-radius);
-        border-top-left-radius: var(--#{$prefix}dropdown-item-border-radius);
-      }
-
-      &:last-child {
-        border-bottom-right-radius: var(
-          --#{$prefix}dropdown-item-border-radius
-        );
-        border-bottom-left-radius: var(--#{$prefix}dropdown-item-border-radius);
-      }
-    } */
-
+    list-style: none;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    z-index: 2000;
   }
 
   &-toggle {
