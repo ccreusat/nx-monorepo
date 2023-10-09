@@ -151,6 +151,10 @@
           .avatar {
             --#{$prefix}avatar-size: 2rem;
           }
+
+          &.show {
+            display: block !important;
+          }
         }
 
         @include bootstrap.media-breakpoint-up(md) {
@@ -172,10 +176,6 @@
           .nav-text {
             @include bootstrap.visually-hidden;
           }
-        }
-
-        &.show {
-          display: block !important;
         }
       }
 
