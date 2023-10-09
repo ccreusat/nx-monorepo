@@ -80,7 +80,7 @@
     &.modal-md,
     &.modal-lg {
       @include bootstrap.media-breakpoint-up(xs) {
-        max-width: fit-content;
+        max-width: 100%;
         margin-right: $spacer-16;
         margin-left: $spacer-16;
       }
