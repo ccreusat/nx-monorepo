@@ -8,6 +8,8 @@
 
     cursor: pointer;
     transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 300ms;
+    border-radius: var(--#{$prefix}dropdown-item-border-radius);
+    padding: $spacer-8 $spacer-12;
 
     svg {
       width: 2.2rem;
@@ -22,6 +24,12 @@
     &:focus-visible {
       outline: none;
       background-color: $gray-200;
+    }
+
+    &.active,
+    &:active {
+      color: $dropdown-link-active-color;
+      background-color: $dropdown-link-active-bg;
     }
 
     &[role="menuitemradio"] {
@@ -44,7 +52,7 @@
     flex-direction: column;
     gap: $spacer-4;
 
-    > .dropdown-item {
+    /* > .dropdown-item {
       &:first-child {
         border-top-right-radius: var(--#{$prefix}dropdown-item-border-radius);
         border-top-left-radius: var(--#{$prefix}dropdown-item-border-radius);
@@ -56,14 +64,12 @@
         );
         border-bottom-left-radius: var(--#{$prefix}dropdown-item-border-radius);
       }
-    }
+    } */
 
-    &:focus {
-      outline: 2px solid red;
-    }
   }
 
   &-toggle {
+    white-space: nowrap;
     display: inline-flex;
     gap: 4px;
     align-items: center;
