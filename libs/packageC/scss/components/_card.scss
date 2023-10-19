@@ -90,7 +90,8 @@
 
   &-upload {
     flex-direction: unset;
-    border: hidden;
+    border: hidden !important;
+    box-shadow: unset !important;
     padding: $spacer-8;
     gap: $spacer-12;
 
