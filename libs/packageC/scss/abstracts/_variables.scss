@@ -252,12 +252,12 @@ $modal-inner-padding: $spacer-0 !default;
 $modal-content-padding: $spacer-32 !default;
 $modal-header-padding: $spacer-0 !default;
 $modal-footer-padding: $spacer-0 !default;
-$modal-dialog-margin: $spacer-64 !default;
+$modal-dialog-margin: $spacer-32 !default;
 $modal-title-line-height: 3.2rem !default;
 $modal-footer-gap: $spacer-8 !default;
 $modal-max-width-md: 648px !default;
 $modal-max-width-lg: 872px !default;
-$zindex-modal: 1055 !default;
+$modal-zindex: 1055 !default;
 
 /* Alerts */
 $alert-color-scale: 0 !default;

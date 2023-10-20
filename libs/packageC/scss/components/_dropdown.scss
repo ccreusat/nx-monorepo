@@ -8,6 +8,8 @@
 
     cursor: pointer;
     transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 300ms;
+    border-radius: var(--#{$prefix}dropdown-item-border-radius);
+    padding: $spacer-8 $spacer-12;
 
     svg {
       width: 2.2rem;
@@ -18,10 +20,17 @@
       outline: none;
     }
 
+    &:hover,
     &.focus,
     &:focus-visible {
       outline: none;
       background-color: $gray-200;
+    }
+
+    &.active,
+    &:active {
+      color: $dropdown-link-active-color;
+      background-color: $dropdown-link-active-bg;
     }
 
     &[role="menuitemradio"] {
@@ -43,27 +52,14 @@
     display: flex;
     flex-direction: column;
     gap: $spacer-4;
-
-    > .dropdown-item {
-      &:first-child {
-        border-top-right-radius: var(--#{$prefix}dropdown-item-border-radius);
-        border-top-left-radius: var(--#{$prefix}dropdown-item-border-radius);
-      }
-
-      &:last-child {
-        border-bottom-right-radius: var(
-          --#{$prefix}dropdown-item-border-radius
-        );
-        border-bottom-left-radius: var(--#{$prefix}dropdown-item-border-radius);
-      }
-    }
-
-    &:focus {
-      outline: 2px solid red;
-    }
+    list-style: none;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    z-index: 2000;
   }
 
   &-toggle {
+    white-space: nowrap;
     display: inline-flex;
     gap: 4px;
     align-items: center;
