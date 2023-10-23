@@ -82,7 +82,17 @@
   }
 }
 
-.tab-content > .tab-pane:focus-visible {
-  outline-offset: -1px;
-  outline-color: var(--#{$prefix}secondary);
+.tab-content {
+  & > .tab-pane {
+    display: none;
+
+    &:focus-visible {
+      outline-offset: -1px;
+      outline-color: var(--#{$prefix}secondary);
+    }
+  }
+
+  & > .active {
+    display: flex;
+  }
 }
