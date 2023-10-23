@@ -32,14 +32,17 @@
     "main",
     {
       "name": "develop",
+      "channel": "develop",
       "prerelease": true
     },
     {
       "name": "develop-b2school",
+      "channel": "develop-b2school",
       "prerelease": true
     },
     {
       "name": "develop-pedago",
+      "channel": "develop-pedago",
       "prerelease": true
     }
   ]
