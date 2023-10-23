@@ -133,7 +133,7 @@
 
         &:disabled,
         &.disabled {
-          --#{$prefix}btn-disabled-color: #{$gray-800};
+          --#{$prefix}btn-disabled-color: #{$gray-500};
         }
         
         &[state="selected"],
