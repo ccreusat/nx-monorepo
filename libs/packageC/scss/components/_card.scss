@@ -38,14 +38,14 @@
 
     .btn {
       --#{$prefix}btn-border-radius: 0.8rem;
-  
+
       position: absolute;
       top: 0;
       right: 0;
       background-color: transparent;
       border: 0;
       opacity: 0;
-  
+
       &:focus-visible {
         opacity: 1;
       }
@@ -68,7 +68,7 @@
       height: 4.8rem;
       width: 4.8rem;
     }
-    
+
     &.medium {
       width: 8rem;
       height: 8rem;
@@ -123,7 +123,7 @@
     }
 
     .btn {
-      background-color: var(--#{$prefix}secondary-200)!important;
+      background-color: var(--#{$prefix}secondary-200) !important;
       opacity: 1;
     }
   }
