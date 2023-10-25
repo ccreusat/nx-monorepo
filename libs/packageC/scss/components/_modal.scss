@@ -2,9 +2,7 @@
 @use "../vendors/bootstrap";
 
 .modal {
-  // scss-docs-start modal-css-vars
-
-  --#{$prefix}modal-zindex: #{$zindex-modal};
+  --#{$prefix}modal-zindex: #{$modal-zindex};
   --#{$prefix}modal-width: #{bootstrap.$modal-md};
   --#{$prefix}modal-max-width-md: #{$modal-max-width-md};
   --#{$prefix}modal-max-width-lg: #{$modal-max-width-lg};
@@ -14,7 +12,7 @@
   --#{$prefix}modal-bg: #{$white};
   --#{$prefix}modal-border-color: #{bootstrap.$modal-content-border-color};
   --#{$prefix}modal-border-width: #{$modal-content-border-width};
-  --#{$prefix}modal-border-radius: #{bootstrap.$modal-content-border-radius};
+  --#{$prefix}modal-border-radius: #{$border-radius-xl};
   --#{$prefix}modal-box-shadow: #{bootstrap.$modal-content-box-shadow-xs};
   --#{$prefix}modal-inner-border-radius: #{bootstrap.$modal-content-inner-border-radius};
   --#{$prefix}modal-content-padding: #{$modal-content-padding};
@@ -29,86 +27,147 @@
   --#{$prefix}modal-footer-border-color: #{bootstrap.$modal-footer-border-color};
   --#{$prefix}modal-footer-border-width: #{$modal-footer-border-width};
   --#{$prefix}modal-footer-padding: #{$modal-footer-padding};
-  // scss-docs-end modal-css-vars
 
-  .modal-dialog {
-    margin-top: $spacer-32;
-    margin-bottom: $spacer-32;
+  position: fixed;
+  inset: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: var(--#{$prefix}modal-zindex);
+  padding-block: var(--#{$prefix}modal-margin);
 
-    @include bootstrap.media-breakpoint-up(md) {
-      margin-top: $spacer-48;
-      margin-bottom: $spacer-48;
+  @include bootstrap.media-breakpoint-up(md) {
+    --#{$prefix}modal-margin: #{$spacer-48};
+  }
+
+  @include bootstrap.media-breakpoint-up(lg) {
+    --#{$prefix}modal-margin: #{$spacer-64};
+  }
+
+  &-content {
+    padding: var(--#{$prefix}modal-content-padding);
+    position: relative;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    background-clip: padding-box;
+  }
+
+  &-header,
+  &-footer {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    background-color: $white;
+  }
+
+  &-footer {
+    gap: var(--#{$prefix}modal-footer-gap);
+    justify-content: flex-end;
+    border-bottom-left-radius: var(--#{$prefix}modal-border-radius);
+    border-bottom-right-radius: var(--#{$prefix}modal-border-radius);
+  }
+
+  &-header {
+    border-top-left-radius: var(--#{$prefix}modal-border-radius);
+    border-top-right-radius: var(--#{$prefix}modal-border-radius);
+
+    .btn-close {
+      position: absolute;
+      top: 1.9rem;
+      right: 1.9rem;
+      color: var(--#{$prefix}gray-800);
+      opacity: 1;
     }
 
-    @include bootstrap.media-breakpoint-up(lg) {
-      margin-top: $spacer-64;
-      margin-bottom: $spacer-64;
+    + .modal-subtitle {
+      margin-top: $spacer-8;
+    }
+  }
+
+  &-body {
+    margin-block: $spacer-24;
+    flex: 1;
+  }
+
+  &-dialog {
+    border-radius: var(--#{$prefix}modal-border-radius);
+    background-color: var(--#{$prefix}modal-bg);
+    max-width: var(--#{$prefix}modal-width);
+    margin-inline: auto;
+  }
+
+  &-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: calc($modal-zindex - 1);
+    background-color: $modal-backdrop-bg;
+    opacity: $modal-backdrop-opacity;
+  }
+
+  &-scrollable {
+    .modal-dialog {
+      height: 100%;
+    }
+
+    .modal-content {
+      max-height: 100%;
+      overflow: hidden;
+    }
+
+    .modal-body {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+
+  &.modal-md,
+  &.modal-lg {
+    @include bootstrap.media-breakpoint-up(xs) {
+      padding-inline: $spacer-16;
+
+      .modal-dialog {
+        max-width: 100%;
+      }
+    }
+
+    @include bootstrap.media-breakpoint-up(sm) {
+      padding-inline: $spacer-32;
     }
 
     & > .modal-content {
-      padding: var(--#{$prefix}modal-content-padding);
-
-      & > .modal-header {
-        .btn-close {
-          position: absolute;
-          top: 1.9rem;
-          right: 1.9rem;
-          color: var(--#{$prefix}gray-800);
-          opacity: 1;
-        }
-      }
-
-      & > .modal-body {
-        padding: $spacer-32 $spacer-0;
-      }
-
-      & > .modal-footer {
-        gap: var(--#{$prefix}modal-footer-gap);
-
-        & > * {
-          margin: 0;
-        }
-      }
-    }
-
-    &.modal-md,
-    &.modal-lg {
       @include bootstrap.media-breakpoint-up(xs) {
-        max-width: fit-content;
-        margin-right: auto;
-        margin-left: auto;
+        padding: $spacer-24;
       }
 
-      & > .modal-content {
-        @include bootstrap.media-breakpoint-up(xs) {
-          padding: $spacer-24;
-        }
-
-        @include bootstrap.media-breakpoint-up(md) {
-          padding: var(--#{$prefix}modal-content-padding);
-        }
+      @include bootstrap.media-breakpoint-up(md) {
+        padding: var(--#{$prefix}modal-content-padding);
       }
     }
+  }
 
-    &.modal-md {
-      @include bootstrap.media-breakpoint-up(md) {
+  &.modal-md {
+    @include bootstrap.media-breakpoint-up(md) {
+      .modal-dialog {
         max-width: var(--#{$prefix}modal-max-width-md);
-        margin-right: auto;
-        margin-left: auto;
       }
     }
+  }
 
-    &.modal-lg {
-      @include bootstrap.media-breakpoint-up(md) {
-        margin-right: auto;
-        margin-left: auto;
-      }
+  &.modal-lg {
+    @include bootstrap.media-breakpoint-up(md) {
+      padding-inline: $spacer-32;
+    }
 
-      @include bootstrap.media-breakpoint-up(lg) {
+    @include bootstrap.media-breakpoint-up(lg) {
+      .modal-dialog {
         max-width: var(--#{$prefix}modal-max-width-lg);
-        margin-right: auto;
-        margin-left: auto;
       }
+    }
+  }
+
+  &.viewport {
+    .modal-dialog {
+      height: 100%;
     }
   }
 }

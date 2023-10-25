@@ -106,11 +106,10 @@
       }
 
       .dropdown-menu {
-        --#{$prefix}dropdown-padding-y: #{$dropdown-padding-y};
-        --#{$prefix}dropdown-font-size: #{$dropdown-font-size};
-        --#{$prefix}dropdown-bg: #{$white};
-
-        position: absolute;
+        position: absolute !important;
+        padding: $spacer-8;
+        background-color: $white;
+        display: none;
 
         .icon {
           color: var(--#{$prefix}gray-800);
@@ -119,24 +118,55 @@
         }
 
         .dropdown-item {
+          border-radius: $border-radius !important;
+          gap: $spacer-8;
+          font-size: 1.2rem;
+          width: 100%;
+
+          @include bootstrap.media-breakpoint-up(md) {
+            border-radius: 0 !important;
+
+            &.nav-link {
+              background-color: transparent;
+              &:hover {
+                background-color: transparent;
+              }
+            }
+          }
+
           @include bootstrap.media-breakpoint-down(md) {
-            padding: 0.5rem;
-            display: inline-flex;
-            gap: $spacer-8;
-            border-bottom: 0;
+            &.nav-link {
+              border-bottom: 0;
+              &:hover {
+                border-bottom: 0;
+              }
+            }
+          }
+        }
+
+        .dropdown-divider {
+          margin-block: $spacer-4;
+        }
+
+        @include bootstrap.media-breakpoint-down(md) {
+          .avatar {
+            --#{$prefix}avatar-size: 2rem;
+          }
+
+          &.show {
+            display: block !important;
           }
         }
 
         @include bootstrap.media-breakpoint-up(md) {
-          --#{$prefix}dropdown-padding-y: #{$dropdown-padding-y};
-          --#{$prefix}dropdown-padding-x: #{$dropdown-padding-x};
-          --#{$prefix}dropdown-border-width: #{$dropdown-border-width};
-          --#{$prefix}dropdown-box-shadow: #{$dropdown-box-shadow};
-          --#{$prefix}dropdown-bg: #{$dropdown-bg};
+          position: static !important;
           display: flex;
-          position: relative !important;
-          background-color: transparent;
+          background: transparent;
+          flex-direction: row;
+          padding: 0;
+          border-radius: 0;
           border: 0;
+          box-shadow: none;
 
           .icon {
             color: var(--#{$prefix}white);
@@ -149,25 +179,12 @@
             @include bootstrap.visually-hidden;
           }
         }
-
-        @include bootstrap.media-breakpoint-down(md) {
-          .popover {
-            display: none !important;
-          }
-
-          .avatar {
-            --#{$prefix}avatar-size: 2rem;
-          }
-        }
-      }
-
-      .dropdown-divider {
-        --#{$prefix}dropdown-divider-margin-y: #{$dropdown-divider-margin-y};
       }
 
       .dropdown-menu-end {
         right: 0;
       }
+
     }
 
     i.ic-help::before {

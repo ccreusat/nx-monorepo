@@ -30,7 +30,7 @@ hr {
 }
 
 .text-secondary {
-  color: var(--#{$prefix}secondary);
+  color: var(--#{$prefix}secondary) !important;
 }
 
 .text-bg-secondary {
