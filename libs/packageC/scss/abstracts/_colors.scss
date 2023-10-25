@@ -1,3 +1,5 @@
+@use "sass:map";
+
 /* Color System */
 $white: #fff !default;
 $black: #000 !default;
@@ -138,10 +140,35 @@ $support-colors: (
   ),
 ) !default;
 
-$extend-theme-colors: (
+$accessible-colors: (
+  "accessible-blue": "#648FFF",
+  "accessible-deep-blue": "#785EF0",
+  "accessible-pink": "#DC267F",
+  "accessible-salamander": "#FE6100",
+  "accessible-sunshade": "#FFB000",
+  "accessible-yellow": "#F3EA14",
+) !default;
+
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+);
+
+$extend-theme-colors: map.merge((
   "tertiary": $tertiary,
   "medium": $medium,
-) !default;
+  "green-200": $green-200,
+  "red-200": $red-200,
+  "purple-200": $purple-200,
+  "yellow-200": $yellow-200,
+), $grays) !default;
 
 /* extra colors that we merge to get css vars(); */
 $extra-colors: (
