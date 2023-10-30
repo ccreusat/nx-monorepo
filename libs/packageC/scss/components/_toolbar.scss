@@ -3,10 +3,10 @@
 .toolbar {
   align-items: center;
   gap: $spacer-8;
+  border-radius: $spacer-16;
 
   &.default {
     padding: $spacer-8 $spacer-12;
-    border-radius: $spacer-16;
     box-shadow: $box-shadow;
   }
 
