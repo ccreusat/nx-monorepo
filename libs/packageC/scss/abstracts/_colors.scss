@@ -167,16 +167,24 @@ $grays: (
   "900": $gray-900,
 );
 
-$extend-theme-colors: map.merge(
-  (
-    "tertiary": $tertiary,
-    "medium": $medium,
-    "green-200": $green-200,
-    "red-200": $red-200,
-    "purple-200": $purple-200,
-    "yellow-200": $yellow-200,
-  ),
-  $grays
+$extend-theme-colors: (
+  "tertiary": $tertiary,
+  "medium": $medium,
+  "green-200": $green-200,
+  "red-200": $red-200,
+  "purple-200": $purple-200,
+  "yellow-200": $yellow-200,
+  "orange-200": $orange-200,
+  "blue-200": $blue-200,
+  "gray-100": $gray-100,
+  "gray-200": $gray-200,
+  "gray-300": $gray-300,
+  "gray-400": $gray-400,
+  "gray-500": $gray-500,
+  "gray-600": $gray-600,
+  "gray-700": $gray-700,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900,
 ) !default;
 
 /* extra colors that we merge to get css vars(); */

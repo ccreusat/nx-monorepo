@@ -64,6 +64,9 @@
   &-image {
     overflow: clip;
     flex-shrink: 0;
+    border-radius: $border-radius;
+
+    --#{$prefix}aspect-ratio: 1 / 1;
 
     &.small {
       height: 4.8rem;
@@ -73,17 +76,12 @@
     &.medium {
       width: 8rem;
       height: 8rem;
-      border-radius: $border-radius;
-
-      > img {
-        aspect-ratio: 1 / 1;
-      }
     }
 
     &.landscape {
-      > img {
-        aspect-ratio: 16 / 10;
-      }
+      background-color: $black;
+      
+      --#{$prefix}aspect-ratio: 16 / 10;
     }
   }
 
@@ -101,16 +99,21 @@
     }
   }
 
-  &-file {
+  &.card-file {
     box-shadow: none !important;
     border-color: transparent;
+    min-width: 15rem;
+
+    .card-body {
+      display: block;
+    }
 
     &:hover {
       border-color: var(--#{$prefix}card-hover-border-color);
     }
   }
 
-  &-upload {
+  &.card-upload {
     flex-direction: unset;
     border: hidden !important;
     box-shadow: unset !important;
@@ -118,57 +121,17 @@
     gap: $spacer-12;
 
     .card-image {
-      height: 48px;
-      width: 48px;
+      height: 4.8rem;
+      width: 4.8rem;
     }
 
     .card-body {
-      min-width: 20%;
-      padding: 0;
-    }
-
-    .card-footer {
-      background-color: unset;
       padding: 0;
     }
 
     .text-title {
       font-size: bootstrap.$small-font-size !important;
       margin: 0;
-    }
-
-    .upload-error {
-      color: var(--#{$prefix}danger);
-    }
-
-    .upload-success {
-      color: var(--#{$prefix}success);
-    }
-
-    .loading-color {
-      color: var(--#{$prefix}secondary);
-    }
-
-    .action-content {
-      display: flex;
-      height: 32px;
-      gap: $spacer-12;
-
-      .btn {
-        position: relative;
-        opacity: 1;
-      }
-
-      .status {
-        display: flex;
-        align-items: center;
-      }
-
-      .actions {
-        border-left: solid 1px var(--#{$prefix}gray-400);
-        display: flex;
-        align-items: center;
-      }
     }
 
     @include bootstrap.media-breakpoint-down(md) {
@@ -179,8 +142,8 @@
       }
 
       .card-image {
-        height: 36px;
-        width: 36px;
+        height: 3.6rem;
+        width: 3.6rem;
       }
     }
   }
