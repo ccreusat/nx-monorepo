@@ -80,7 +80,7 @@
 
     &.landscape {
       background-color: $black;
-      
+
       --#{$prefix}aspect-ratio: 16 / 10;
     }
   }
