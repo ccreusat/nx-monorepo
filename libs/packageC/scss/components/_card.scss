@@ -12,6 +12,10 @@
   --#{$prefix}border-radius: #{$spacer-8};
   --#{$prefix}card-border-color: transparent;
   --#{$prefix}card-hover-border-color: var(--#{$prefix}secondary-300);
+  --#{$prefix}card-linker-border-radius: #{$spacer-4};
+  --#{$prefix}card-linker-nth-child-even-bg: var(--#{$prefix}gray-200);
+  --#{$prefix}card-linker-hover-bg: var(--#{$prefix}gray-300);
+  --#{$prefix}card-linker-selected-bg: var(--#{$prefix}secondary-200);
 
   position: relative;
   overflow: hidden;
@@ -145,6 +149,25 @@
         height: 3.6rem;
         width: 3.6rem;
       }
+    }
+  }
+
+  &.card-linker {
+    border-radius: 0;
+
+    &:nth-child(even) {
+      background-color: var(--#{$prefix}card-linker-nth-child-even-bg);
+    }
+
+    &:hover {
+      background-color: var(--#{$prefix}card-linker-hover-bg) !important;
+      border-radius: var(--#{$prefix}card-linker-border-radius);
+    }
+
+    &.is-selected {
+      background-color: var(--#{$prefix}card-linker-selected-bg) !important;
+      border-color: var(--#{$prefix}card-linker-selected-bg);
+      border-radius: var(--#{$prefix}card-linker-border-radius);
     }
   }
 
