@@ -45,6 +45,7 @@ $spacer-12: 1.2rem !default;
 $spacer-16: 1.6rem !default;
 $spacer-24: 2.4rem !default;
 $spacer-32: 3.2rem !default;
+$spacer-40: 4rem !default;
 $spacer-48: 4.8rem !default;
 $spacer-64: 6.4rem !default;
 
@@ -57,6 +58,7 @@ $spacers: (
   16: $spacer-16,
   24: $spacer-24,
   32: $spacer-32,
+  40: $spacer-40,
   48: $spacer-48,
   64: $spacer-64,
 ) !default;
