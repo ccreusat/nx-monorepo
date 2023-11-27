@@ -13,9 +13,14 @@
   }
 
   .modal-body {
+    position: relative;
     padding-top: $spacer-48;
     display: grid;
     background: white;
+
+    p {
+      margin-block: 2rem;
+    }
   }
 
   #TOC {
@@ -27,7 +32,6 @@
   }
 
   #TOC > #TOC-list {
-    /* display: none; */
     position: absolute;
     left: 0;
     right: 0;
@@ -79,6 +83,7 @@
     .modal-body {
       display: grid;
       grid-template-columns: 10em 1fr;
+      padding-top: 0;
       gap: 3.2rem;
     }
   }
