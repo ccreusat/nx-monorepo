@@ -44,6 +44,62 @@
       width: 100%;
     }
   }
+
+  &.is-confirm {
+    z-index: 20;
+    gap: $spacer-0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    min-width: 352px;
+    max-width: 602px;
+    border-left: none;
+    box-shadow: var(--#{$prefix}box-shadow);
+
+    .alert-content {
+      padding-top: $spacer-24;
+      padding-left: $spacer-12;
+      padding-right: $spacer-12;
+    }
+
+    .btn-close-container {
+      position: absolute;
+      top: $spacer-12;
+      right: $spacer-12;
+    }
+
+    @include bootstrap.media-breakpoint-up(xs) {
+      width: 100%;
+    }
+  }
+
+  &.top-left {
+    position: fixed;
+    top: $spacer-0;
+    left: $spacer-0;
+    margin: $spacer-12;
+  }
+
+  &.top-right {
+    position: fixed;
+    top: $spacer-0;
+    right: $spacer-0;
+    margin: $spacer-12;
+  }
+
+  &.bottom-left {
+    position: fixed;
+    bottom: $spacer-0;
+    left: $spacer-0;
+    margin: $spacer-12;
+  }
+
+  &.bottom-right {
+    position: fixed;
+    bottom: $spacer-0;
+    right: $spacer-0;
+    margin: $spacer-12;
+  }
 }
 
 @each $state, $key in $support-colors {
