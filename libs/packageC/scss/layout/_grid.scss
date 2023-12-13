@@ -22,3 +22,9 @@
     grid-auto-flow: dense;
   }
 }
+
+.node-attachments {
+  .grid {
+    --#{$prefix}gap: #{$spacer-12};
+  }
+}
