@@ -46,20 +46,21 @@
   }
 
   &.is-confirm {
+    position: fixed;
+    margin: $spacer-12;
     z-index: 20;
     gap: $spacer-0 !important;
     display: flex;
     flex-direction: column;
     align-items: end;
-    min-width: 352px;
-    max-width: 602px;
+    min-width: 35rem;
+    max-width: 60rem;
     border-left: none;
     box-shadow: var(--#{$prefix}box-shadow);
 
     .alert-content {
       padding-top: $spacer-24;
-      padding-left: $spacer-12;
-      padding-right: $spacer-12;
+      padding-inline: $spacer-12;
     }
 
     .btn-close-container {
@@ -74,31 +75,23 @@
   }
 
   &.top-left {
-    position: fixed;
     top: $spacer-0;
     left: $spacer-0;
-    margin: $spacer-12;
   }
 
   &.top-right {
-    position: fixed;
     top: $spacer-0;
     right: $spacer-0;
-    margin: $spacer-12;
   }
 
   &.bottom-left {
-    position: fixed;
     bottom: $spacer-0;
     left: $spacer-0;
-    margin: $spacer-12;
   }
 
   &.bottom-right {
-    position: fixed;
     bottom: $spacer-0;
     right: $spacer-0;
-    margin: $spacer-12;
   }
 }
 
