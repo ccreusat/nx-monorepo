@@ -55,7 +55,7 @@
   $light: var(--#{$prefix}primary-300),
   $box-shadow: transparent
 ) {
-  --#{$prefix}btn-active-bg: #{$gray-300};
+  --#{$prefix}btn-active-bg: #{$gray-400};
   --#{$prefix}btn-active-border-color: transparent;
   --#{$prefix}btn-active-box-shadow-color: transparent;
   --#{$prefix}btn-active-color: #{$dark};
@@ -74,7 +74,7 @@
   --#{$prefix}btn-font-family: #{$btn-font-family};
   --#{$prefix}btn-font-size: 1.6rem;
   --#{$prefix}btn-font-weight: 700;
-  --#{$prefix}btn-hover-bg: #{$gray-200};
+  --#{$prefix}btn-hover-bg: #{$gray-300};
   --#{$prefix}btn-hover-border-color: transparent;
   --#{$prefix}btn-hover-color: #{$dark};
   --#{$prefix}btn-line-height: 1;
