@@ -2,32 +2,51 @@
 
 .ProseMirror {
   .media-node-view .horizontal-resize-handle {
-    bottom: 0px;
-    left: 0px;
-    height: 1rem;
-    width: 100%;
+    bottom: 10px;
+    left: 50%;
+    height: 8px;
+    width: 64px;
     cursor: row-resize;
     position: absolute;
+    border-radius: 4px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $white;
+    transform: translateX(-50%);
   }
 
   .media-node-view .vertical-resize-handle {
-    top: 0px;
-    right: 0px;
-    height: 100%;
-    width: 1rem;
+    top: 50%;
+    right: 10px;
+    height: 64px;
+    width: 8px;
     cursor: col-resize;
     position: absolute;
+    border-radius: 4px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $white;
+    transform: translateY(-50%);
   }
 
-  .media-node-view .horizontal-resize-handle:hover,
-  .media-node-view .vertical-resize-handle:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+  .node-custom-image.has-focus {
+    .media-node-view .horizontal-resize-handle,
+    .media-node-view .vertical-resize-handle {
+      opacity: 1;
+      background-color: $gray-800;
+    }
+
+    .media-node-view img {
+      border-width: 2px;
+      border-style: solid;
+      border-color: $secondary;
+      border-radius: 4px;
+    }
   }
 }
 
 .bubble-menu {
-  background-color: #fff;
+  background-color: $white;
   border-radius: 16px;
   display: flex;
   gap: 8px;
