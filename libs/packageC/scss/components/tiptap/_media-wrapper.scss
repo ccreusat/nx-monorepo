@@ -1,6 +1,12 @@
 @use "../../abstracts/" as *;
 
 .ProseMirror {
+  .media-node-view .horizontal-resize-handle,
+  .media-node-view .vertical-resize-handle {
+    opacity: 0;
+    background-color: $gray-800;
+  }
+
   .media-node-view .horizontal-resize-handle {
     bottom: 10px;
     left: 50%;
@@ -33,11 +39,10 @@
     .media-node-view .horizontal-resize-handle,
     .media-node-view .vertical-resize-handle {
       opacity: 1;
-      background-color: $gray-800;
     }
 
     .media-node-view img {
-      border-width: 2px;
+      border-width: 4px;
       border-style: solid;
       border-color: $secondary;
       border-radius: 4px;
