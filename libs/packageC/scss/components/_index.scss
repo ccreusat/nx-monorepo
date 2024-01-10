@@ -1,12 +1,15 @@
 @forward "actionbar";
 @forward "alert";
-// @forward "app-card";
 @forward "app-icon";
+@forward "attachment";
 @forward "avatar";
+@forward "badge";
 @forward "breadcrumb";
 @forward "buttons";
 @forward "card";
+@forward "color-picker";
 @forward "dropdown";
+@forward "dropzone";
 @forward "emptyscreen";
 @forward "form-check-input";
 @forward "form-control";
@@ -19,7 +22,6 @@
 @forward "input-group";
 @forward "loader";
 @forward "loading-screen";
-@forward "media-library";
 @forward "modal";
 @forward "popover";
 @forward "select-list";
@@ -27,8 +29,11 @@
 @forward "sticky-toolbox";
 @forward "table";
 @forward "table-explorer";
+@forward "tabs";
+@forward "tiptap/";
 @forward "toast";
+@forward "toolbar";
 @forward "treeview";
 @forward "validate-mail";
 @forward "widget/";
-// @forward "table-lists";
+@forward "multimedia/";

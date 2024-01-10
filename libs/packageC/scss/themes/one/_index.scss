@@ -2,6 +2,9 @@
 @use "../../abstracts/" as *;
 @use "../../vendors/bootstrap";
 
+@use "header";
+@use "buttons";
+
 $container-spacings: (
   "xs": 0,
   "sm": 0,
@@ -32,6 +35,18 @@ $container-spacings: (
   --#{$prefix}secondary-200: var(--#{$prefix}orange-200);
   --#{$prefix}secondary-300: var(--#{$prefix}orange-300);
   --#{$prefix}secondary-800: var(--#{$prefix}orange-800);
+  --#{$prefix}green-200: #EAF7E4;
+  --#{$prefix}yellow-200: #FBF4D5;
+  --#{$prefix}purple-300: #D7B5E2;
+  --#{$prefix}green-300: #C8E4AF;
+  --#{$prefix}red-300: #FFB6C0;
+  --#{$prefix}orange-300: #FFCBA0;
+  --#{$prefix}purple-800: #7C2C96;
+  --#{$prefix}blue-800: #2F7EA7;
+  --#{$prefix}green-800: #4E9019;
+  --#{$prefix}yellow-800: #D1AF00;
+  --#{$prefix}red-800: #C6253B;
+  --#{$prefix}orange-800: #DA6A0B;
 
   :where(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6) {
     font-weight: 400;

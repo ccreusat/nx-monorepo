@@ -17,6 +17,10 @@
     cursor: pointer;
     border-radius: 8px;
 
+    &.selected {
+      background-color: $secondary-200;
+    }
+
     &:hover {
       background-color: $gray-200;
     }
