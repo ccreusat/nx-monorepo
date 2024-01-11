@@ -17,12 +17,13 @@
     transform: translateY(-50%);
   }
 
-  .node-custom-image.has-focus {
+  .react-renderer.has-focus {
     .media-node-view .vertical-resize-handle {
       opacity: 1;
     }
 
-    .media-node-view img {
+    .media-node-view img,
+    .media-node-view video {
       border-width: 4px;
       border-style: solid;
       border-color: $secondary;
