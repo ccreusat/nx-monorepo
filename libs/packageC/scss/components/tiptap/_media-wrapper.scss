@@ -23,11 +23,18 @@
     }
 
     .media-node-view {
-      border-width: 4px;
-      border-style: solid;
-      border-color: $secondary;
       border-radius: 4px;
+      outline-color: $secondary;
+      outline-width: 4px;
+      outline-style: solid;
+      outline-offset: -4px;
+
+      img, video{
+        border-radius: 4px;
+      }
+
     }
+
   }
 }
 
