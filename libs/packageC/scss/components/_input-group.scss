@@ -1,8 +1,18 @@
 @use "../abstracts/" as *;
 
 .input-group {
+  --#{$prefix}input-filled-border-color: #{$input-filled-border-color};
+  --#{$prefix}input-invalid-border-color: #{$input-invalid-border-color};
+
   .btn-search {
     border-left-color: transparent;
+  }
+
+  &:focus-within {
+    .input-group-text,
+    .btn-search {
+      border-color: var(--#{$prefix}secondary-300);
+    }
   }
 
   .form-control {
@@ -13,6 +23,13 @@
     &.form-control-lg {
       & + .btn-search {
         padding: $spacer-12;
+      }
+    }
+
+    &:not(:placeholder-shown, :focus) {
+      & + .input-group-text,
+      & + .btn-search {
+        border-color: var(--#{$prefix}input-filled-border-color);
       }
     }
   }

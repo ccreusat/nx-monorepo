@@ -127,8 +127,15 @@
         outline-offset: -1px;
       }
 
+      &:focus-visible {
+        background-color: var(--#{$prefix}gray-200);
+        outline: 2px solid var(--#{$prefix}secondary);
+        outline-offset: -1px;
+      }
+
       &.md {
         line-height: 1.4;
+        padding: $spacer-8 $spacer-8;
       }
 
       &.selected {

@@ -5,6 +5,10 @@ $selected-background-color: var(--#{$prefix}blue-200);
 .treeview {
   --#{$prefix}selected-background-color: #{$selected-background-color};
 
+  [data-product="one"] & {
+    --#{$prefix}selected-background-color: var(--#{$prefix}orange-200);
+  }
+
   .action-container {
     &:hover {
       background-color: var(--#{$prefix}gray-300);
