@@ -15,7 +15,7 @@
     /* Headers should use inherited font family and text transformation.*/
     :where(h1, h2, h3, .h1, .h2, .h3) {
         font-family: inherit;
-        font-weight: 400;
+        font-weight: 700;
         text-transform: inherit;
         color: var(--#{$prefix}secondary);
     }
