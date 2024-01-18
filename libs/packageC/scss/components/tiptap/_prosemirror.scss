@@ -19,9 +19,4 @@
         text-transform: inherit;
         color: var(--#{$prefix}secondary);
     }
-    :where(h4, h5, h6, .h4, .h5, .h6) {
-        font-family: inherit;
-        font-weight: inherit;
-        text-transform: inherit;
-    }
 }
