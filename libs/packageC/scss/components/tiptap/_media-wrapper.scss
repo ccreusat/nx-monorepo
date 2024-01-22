@@ -6,6 +6,11 @@
     background-color: $secondary;
   }
 
+  .media-node-view {
+      position: relative;
+      width: fit-content;
+  }
+
   .media-node-view .vertical-resize-handle {
     top: 50%;
     right: -10px;
@@ -28,6 +33,8 @@
       outline-width: 4px;
       outline-style: solid;
       outline-offset: -4px;
+      position: relative;
+      width: fit-content;
 
       img, video{
         border-radius: 4px;
