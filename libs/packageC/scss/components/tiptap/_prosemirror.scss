@@ -1,3 +1,5 @@
+@use "../../abstracts/" as *;
+
 // The CSS selector defined here must override other rules, whatever the theme.
 // Hence the following [data-product] is required.
 [data-product] .ProseMirror {
@@ -15,10 +17,6 @@
         font-family: inherit;
         font-weight: 700;
         text-transform: inherit;
-    }
-    :where(h4, h5, h6, .h4, .h5, .h6) {
-        font-family: inherit;
-        font-weight: inherit;
-        text-transform: inherit;
+        color: var(--#{$prefix}secondary);
     }
 }

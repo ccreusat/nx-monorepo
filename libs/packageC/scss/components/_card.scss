@@ -119,6 +119,7 @@
   }
 
   &.card-upload {
+    overflow: inherit;
     flex-direction: unset;
     border: hidden !important;
     box-shadow: unset !important;
