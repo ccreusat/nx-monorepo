@@ -6,6 +6,10 @@
   gap: $spacer-8;
   border-radius: $spacer-16;
 
+  & > * {
+    flex-shrink: 0;
+  }
+
   @include bootstrap.media-breakpoint-down(md) {
     gap: $spacer-4;
   }
