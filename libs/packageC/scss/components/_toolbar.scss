@@ -1,9 +1,14 @@
 @use "../abstracts/" as *;
+@use "../vendors/bootstrap";
 
 .toolbar {
   align-items: center;
   gap: $spacer-8;
   border-radius: $spacer-16;
+
+  @include bootstrap.media-breakpoint-down(md) {
+    gap: $spacer-4;
+  }
 
   &.default {
     padding: $spacer-8 $spacer-12;
