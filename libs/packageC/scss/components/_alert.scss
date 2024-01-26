@@ -43,7 +43,7 @@
 
   &.is-toast {
     padding-right: 2rem;
-    z-index: 20;
+    z-index: 9999;
     min-width: 352px;
     max-width: calc(402px - 2rem);
     box-shadow: var(--#{$prefix}box-shadow);
@@ -56,7 +56,7 @@
   &.is-confirm {
     position: fixed;
     margin: $spacer-12;
-    z-index: 20;
+    z-index: 9999;
     gap: $spacer-0 !important;
     display: flex;
     flex-direction: column;
