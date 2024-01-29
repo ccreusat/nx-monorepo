@@ -45,6 +45,7 @@ $spacer-12: 1.2rem !default;
 $spacer-16: 1.6rem !default;
 $spacer-24: 2.4rem !default;
 $spacer-32: 3.2rem !default;
+$spacer-40: 4rem !default;
 $spacer-48: 4.8rem !default;
 $spacer-64: 6.4rem !default;
 
@@ -57,6 +58,7 @@ $spacers: (
   16: $spacer-16,
   24: $spacer-24,
   32: $spacer-32,
+  40: $spacer-40,
   48: $spacer-48,
   64: $spacer-64,
 ) !default;
@@ -101,9 +103,11 @@ $container-padding-x: 3.2rem !default;
 /* Gutter Grid CSS */
 $grid-gutter-width: 2.4rem !default;
 
+/* Enable Options */
 $enable-negative-margins: true !default;
 $enable-rfs: false !default;
 $enable-cssgrid: true !default;
+$enable-dark-mode: false !default;
 
 /* Buttons */
 $button-colors: (
@@ -314,8 +318,8 @@ $nav-tabs-link-active-bg: $white !default;
 $nav-tabs-link-active-color: $gray-600 !default;
 
 /* Tooltip */
-$tooltip-padding-y: 1.2rem !default;
-$tooltip-padding-x: 1.2rem !default;
+$tooltip-padding-y: $spacer-8 !default;
+$tooltip-padding-x: $spacer-12 !default;
 $tooltip-arrow-width: 1.6rem !default;
 $tooltip-arrow-height: 0.8rem !default;
 $tooltip-opacity: 0.8 !default;
@@ -346,3 +350,31 @@ $navbar-padding-y: 0;
 $navbar-badge-padding-x: 0.55em;
 $navbar-badge-padding-y: 0.35em;
 $navbar-badge-font-size: 0.55em;
+
+// Borders Sass variables
+$border-color: $gray-400 !default;
+
+//Attachment
+$attachment-border-color: $gray-400 !default;
+$attachment-border-color-focus: $gray-600 !default;
+$attachment-border-color-active: $gray-800 !default;
+$attachment-background-color: $white !default;
+$attachment-border-width: 0.1rem;
+
+//Tabs
+$tabs-border-width: 0.1rem !default;
+$tabs-gap: 0.8rem !default;
+$tabs-svg-size: 2rem !default;
+
+// Nav Tabs
+$nav-link-padding-y: $spacer-12;
+$nav-link-padding-x: $spacer-12;
+$nav-link-color: $gray-800;
+$nav-link-hover-color: $gray-800;
+
+// Dropzone Tabs
+$dropzone-width-content: 425px !default;
+$dropzone-font-weight: 600 !default;
+
+/* Tiptap */
+$badge-linker-max-width: 31rem !default;

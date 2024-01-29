@@ -5,6 +5,7 @@
 .alert {
   --#{$prefix}alert-border-left-color: var(--#{prefix}gray-800);
   --#{$prefix}alert-bg: #{$white};
+  --#{$prefix}z-index: 9999;
 
   display: flex;
   align-items: center;
@@ -34,15 +35,81 @@
     transform-origin: left;
   }
 
+  .btn-close {
+    opacity: 1;
+    box-sizing: border-box;
+    width: 2rem;
+    height: 2rem;
+  }
+
   &.is-toast {
-    z-index: 20;
+    padding-right: 2rem;
+    z-index: var(--#{$prefix}z-index);
     min-width: 352px;
-    max-width: 402px;
+    max-width: calc(402px - 2rem);
     box-shadow: var(--#{$prefix}box-shadow);
 
     @include bootstrap.media-breakpoint-up(xs) {
       width: 100%;
     }
+  }
+
+  &.is-confirm {
+    position: fixed;
+    margin: $spacer-12;
+    z-index: var(--#{$prefix}z-index);
+    gap: $spacer-0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    min-width: 35rem;
+    max-width: 60rem;
+    border-left: none;
+    box-shadow: var(--#{$prefix}box-shadow);
+
+    .alert-content {
+      padding-top: $spacer-24;
+      padding-inline: $spacer-12;
+    }
+
+    .btn-close-container {
+      position: absolute;
+      top: $spacer-12;
+      right: $spacer-12;
+    }
+
+    @include bootstrap.media-breakpoint-up(xs) {
+      width: 100%;
+    }
+  }
+
+  &.is-dismissible {
+    .btn-close {
+      position: absolute;
+      right: $spacer-12;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &.top-left {
+    top: $spacer-0;
+    left: $spacer-0;
+  }
+
+  &.top-right {
+    top: $spacer-0;
+    right: $spacer-0;
+  }
+
+  &.bottom-left {
+    bottom: $spacer-0;
+    left: $spacer-0;
+  }
+
+  &.bottom-right {
+    bottom: $spacer-0;
+    right: $spacer-0;
   }
 }
 
