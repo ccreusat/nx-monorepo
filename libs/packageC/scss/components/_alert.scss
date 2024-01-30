@@ -5,6 +5,7 @@
 .alert {
   --#{$prefix}alert-border-left-color: var(--#{prefix}gray-800);
   --#{$prefix}alert-bg: #{$white};
+  --#{$prefix}z-index: 9999;
 
   display: flex;
   align-items: center;
@@ -43,7 +44,7 @@
 
   &.is-toast {
     padding-right: 2rem;
-    z-index: 20;
+    z-index: var(--#{$prefix}z-index);
     min-width: 352px;
     max-width: calc(402px - 2rem);
     box-shadow: var(--#{$prefix}box-shadow);
@@ -56,7 +57,7 @@
   &.is-confirm {
     position: fixed;
     margin: $spacer-12;
-    z-index: 20;
+    z-index: var(--#{$prefix}z-index);
     gap: $spacer-0 !important;
     display: flex;
     flex-direction: column;
