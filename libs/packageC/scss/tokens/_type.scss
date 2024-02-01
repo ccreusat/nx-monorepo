@@ -111,4 +111,18 @@ h4,
     -webkit-box-orient: vertical;
     white-space: normal;
   }
+
+  &.text-truncate-8 {
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+  }
+
+  &.text-truncate-12 {
+    display: -webkit-box;
+    -webkit-line-clamp: 12;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+  }
 }
