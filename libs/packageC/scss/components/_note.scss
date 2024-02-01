@@ -1,0 +1,27 @@
+.note {
+  min-height: 224px;
+  max-height: 372px;
+  width: 224px;
+  background-color: transparent !important;
+  padding: 0;
+
+  .card-body {
+    align-items: unset;
+    text-align: initial;
+    max-height: 334px;
+    flex-wrap: wrap;
+  }
+
+  .card-footer {
+    background-color: transparent !important;
+    color: #909090 !important;
+  }
+}
+
+.note.is-dragging .card-header button {
+  cursor: grabbing !important;
+}
+
+.note.is-grab .card-header button {
+  cursor: grab !important;
+}
