@@ -2,7 +2,7 @@
   min-height: 224px;
   max-height: 372px;
   width: 224px;
-  background-color: #fbf4d5 !important;
+  background-color: transparent !important;
   padding: 0;
 
   .card-body {
@@ -16,4 +16,12 @@
     background-color: transparent !important;
     color: #909090 !important;
   }
+}
+
+.note.is-dragging .card-header button {
+  cursor: grabbing !important;
+}
+
+.note.is-grab .card-header button {
+  cursor: grab !important;
 }
