@@ -113,6 +113,10 @@
       display: block;
     }
 
+    &.is-selected {
+      border-width: 0.2rem;
+    }
+
     &:hover {
       border-color: var(--#{$prefix}card-hover-border-color);
     }
@@ -190,7 +194,6 @@
 
   &.is-selected {
     border-color: var(--#{$prefix}card-selected);
-    border-width: 0.2rem;
 
     &:hover {
       border-color: var(--#{$prefix}card-selected);
