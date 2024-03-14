@@ -16,7 +16,6 @@ $zindex-2000: (
 
 $zindex-levels: map.merge($zindex-levels, $zindex-2000);
 $colors: map.merge($colors, $extra-colors);
-$theme-colors: map.merge($theme-colors, $extend-theme-colors);
 
 // 5. Include remainder of required parts
 @import "./bootstrap/scss/maps";
