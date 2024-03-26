@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ccreusat-monorepo/ui-library": ["ui-library/src/index.ts"]
+      "@ccreusat-monorepo/client": ["libs/client/src/index.ts"],
+      "@ccreusat-monorepo/ui-library": ["libs/ui-library/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

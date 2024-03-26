@@ -1,5 +1,6 @@
 {
   "name": "@ccreusat-monorepo/ui-library",
+  "private": false,
   "version": "0.0.1",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -8,5 +9,11 @@
       "import": "./index.mjs",
       "require": "./index.js"
     }
+  },
+  "dependencies": {
+    "react": "18.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

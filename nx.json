@@ -14,6 +14,33 @@
     ],
     "sharedGlobals": []
   },
+  "targetDefaults": {
+    "@nx/vite:build": {
+      "cache": true,
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "production",
+        "^production"
+      ]
+    },
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/{projectRoot}"
+      ],
+      "cache": true
+    },
+    "typecheck": {
+      "cache": true
+    },
+    "lint": {
+      "cache": true
+    }
+  },
   "plugins": [
     {
       "plugin": "@nx/eslint/plugin",
@@ -30,6 +57,12 @@
         "serveTargetName": "serve",
         "serveStaticTargetName": "serve-static"
       }
+    },
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
     }
   ],
   "generators": {
@@ -40,10 +73,12 @@
     }
   },
   "release": {
+    "projectsRelationship": "independent",
     "projects": [
-      "ui-library"
+      "libs/*"
     ],
     "version": {
+      "preVersionCommand": "pnpm dlx nx run-many -t build",
       "conventionalCommits": true
     }
   }
