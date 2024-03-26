@@ -1,7 +1,7 @@
 {
   "name": "client",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/{projectName}/src",
+  "sourceRoot": "libs/client/src",
   "projectType": "library",
   "targets": {
     "build": {
@@ -10,11 +10,11 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/libs/{projectName}",
-        "main": "libs/{projectName}/src/index.ts",
-        "tsConfig": "libs/{projectName}/tsconfig.lib.json",
+        "outputPath": "dist/libs/client",
+        "main": "libs/client/src/index.ts",
+        "tsConfig": "libs/client/tsconfig.lib.json",
         "assets": [
-          "libs/{projectName}/*.md"
+          "libs/client/*.md"
         ]
       }
     },

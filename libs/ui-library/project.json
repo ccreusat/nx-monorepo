@@ -1,7 +1,7 @@
 {
   "name": "ui-library",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/{projectName}/src",
+  "sourceRoot": "libs/ui-library/src",
   "projectType": "library",
   "tags": [],
   "// targets": "to see all targets run: nx show project ui-library --web",
@@ -15,11 +15,11 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/libs/{projectName}",
-        "main": "libs/{projectName}/src/index.ts",
-        "tsConfig": "libs/{projectName}/tsconfig.lib.json",
+        "outputPath": "dist/libs/ui-library",
+        "main": "libs/ui-library/src/index.ts",
+        "tsConfig": "libs/ui-library/tsconfig.lib.json",
         "assets": [
-          "libs/{projectName}/*.md"
+          "libs/ui-library/*.md"
         ]
       }
     },
@@ -30,8 +30,8 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "libs/{projectName}/**/*.{ts,tsx,js,jsx}",
-          "libs/{projectName}/package.json"
+          "libs/ui-library/**/*.{ts,tsx,js,jsx}",
+          "libs/ui-library/package.json"
         ]
       }
     },
