@@ -15,8 +15,19 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ccreusat-monorepo/bootstrap": ["libs/bootstrap/scss/index.scss"],
       "@ccreusat-monorepo/client": ["libs/client/src/index.ts"],
-      "@ccreusat-monorepo/ui-library": ["libs/ui-library/src/index.ts"]
+      "@ccreusat-monorepo/docs": ["docs/src/index.ts"],
+      "@ccreusat-monorepo/icons": ["libs/react/icons/src/index.ts"],
+      "@ccreusat-monorepo/icons/nav": ["libs/react/icons/src/nav/index.ts"],
+      "@ccreusat-monorepo/multimedia": ["libs/react/multimedia/src/index.ts"],
+      "@ccreusat-monorepo/tiptap-extension-alert": [
+        "libs/extensions/alert/src/index.ts"
+      ],
+      "@ccreusat-monorepo/tiptap-extension-attachment": [
+        "libs/extensions/attachment/src/index.ts"
+      ],
+      "@ccreusat-monorepo/ui-library": ["libs/react/ui-library/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
