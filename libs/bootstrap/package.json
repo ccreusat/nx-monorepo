@@ -1,6 +1,10 @@
 {
   "name": "@ccreusat-monorepo/bootstrap",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccreusat/nx-monorepo"
+  },
   "dependencies": {
     "@popperjs/core": "2.11.8",
     "bootstrap": "5.3.2"
