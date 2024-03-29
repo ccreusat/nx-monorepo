@@ -51,7 +51,7 @@ jobs:
 
           echo "Your current branch is ${{ github.ref_name }}"
 
-          pnpm nx release --skip-publish
+          pnpm nx release --first-release --skip-publish
           pnpm nx release publish
         shell: bash
         env:
