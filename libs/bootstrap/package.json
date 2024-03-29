@@ -1,6 +1,6 @@
 {
   "name": "@ccreusat-monorepo/bootstrap",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "dependencies": {
     "@popperjs/core": "2.11.8",
     "bootstrap": "5.3.2"
