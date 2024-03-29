@@ -5,7 +5,7 @@
   "projectType": "library",
   "targets": {
     "compile": {
-      "command": "rm -rf dist/libs/bootstrap && sass --load-path=node_modules/ --style=compressed libs/bootstrap/scss/index.scss dist/libs/bootstrap/index.css && cp -r libs/bootstrap/assets dist/libs/bootstrap",
+      "command": "rm -rf dist/libs/bootstrap && sass --load-path=node_modules/ --style=compressed libs/bootstrap/scss/index.scss dist/libs/bootstrap/index.css && cp -r libs/bootstrap/assets dist/libs/bootstrap && cp -r libs/bootstrap/package.json dist/libs/bootstrap",
       "outputs": [
         "{options.outputPath}"
       ]
