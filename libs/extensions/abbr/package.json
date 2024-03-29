@@ -1,0 +1,13 @@
+{
+  "name": "@ccreusat-monorepo/tiptap-extension-abbr",
+  "version": "0.0.1",
+  "dependencies": {
+    "@tiptap/core": "2.2.4"
+  },
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "typings": "./index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  }
+}
