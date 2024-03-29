@@ -3,9 +3,11 @@ on:
   push:
     branches:
       - main
+      - develop
+      - develop*
 
 jobs:
-  main:
+  publish:
     runs-on: ubuntu-latest
     permissions:
       contents: write
