@@ -110,7 +110,6 @@
     }
   },
   "release": {
-    "projectsRelationship": "independent",
     "projects": [
       "libs/*",
       "libs/**/*"
@@ -120,7 +119,7 @@
       "conventionalCommits": true
     },
     "changelog": {
-      "projectChangelogs": {
+      "workspaceChangelog": {
         "createRelease": "github"
       }
     }
