@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { IResource, ResourceType } from '../..';
 import {
   BlogUpdate,
@@ -11,8 +10,10 @@ import { ResourceService } from '../ResourceService';
 const APP = 'blog';
 const RESOURCE = 'blog';
 
-// @ts-expect-error
 export class BlogResourceService extends ResourceService {
+  override getEditUrl(resourceId?: string | undefined): string {
+    throw new Error('Method not implemented.');
+  }
   async create(parameters: CreateParameters): Promise<CreateResult> {
     const thumbnail = parameters.thumbnail
       ? await this.getThumbnailPath(parameters.thumbnail)
@@ -67,7 +68,7 @@ export class BlogResourceService extends ResourceService {
       : `/blog#/edit/new`;
   }
   getViewUrl(resourceId: string): string {
-    return `/blog/id/${resourceId}`;
+    return `/blog#/view/${resourceId}`;
   }
   getPrintUrl(resourceId: string): string {
     return `/blog/print/blog#/print/${resourceId}`;

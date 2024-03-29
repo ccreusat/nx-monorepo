@@ -1,0 +1,43 @@
+{
+  "name": "ui-library",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/react/ui-library/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "dependsOn": ["lint"],
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/react/ui-library",
+        "main": "libs/react/ui-library/src/index.ts",
+        "tsConfig": "libs/react/ui-library/tsconfig.lib.json",
+        "assets": ["libs/react/ui-library/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/react/ui-library/**/*.{ts,tsx,js,jsx}",
+          "libs/react/ui-library/package.json"
+        ]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/libs/react/{projectName}"
+      }
+    }
+  },
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/libs/react/{projectName}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  }
+}

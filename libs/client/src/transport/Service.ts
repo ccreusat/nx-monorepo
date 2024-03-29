@@ -365,8 +365,8 @@ export class HttpService implements IHttp {
     if (p.headers) p.headers['Accept'] = 'application/javascript';
     return this.axios
       .get<string>(this.toCdnUrl(url), p)
-      .then((r: any) => this.mapAxiosResponse(r, params))
-      .then((r: any) => {
+      .then((r) => this.mapAxiosResponse(r, params))
+      .then((r) => {
         try {
           const securedScript = `"use strict";var ${
             resultName.split('.')[0]
@@ -378,7 +378,7 @@ export class HttpService implements IHttp {
           return result;
         }
       })
-      .catch<R>((e: any) => {
+      .catch<R>((e) => {
         this.mapAxiosError(e, params);
         throw e;
       });

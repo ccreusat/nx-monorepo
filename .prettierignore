@@ -2,3 +2,7 @@
 /dist
 /coverage
 /.nx/cache
+*.json
+*.js
+*.yaml
+*.css

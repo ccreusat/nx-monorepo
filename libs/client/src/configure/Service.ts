@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { configure } from './Framework';
 import { IGetConf, IOdeTheme, IThemeConf } from './interfaces';
 import { App, ERROR_CODE } from '../globals';
@@ -76,13 +75,13 @@ export class ConfService {
     return response.apps;
   }
 
-  private getWebAppConf({
+  private async getWebAppConf({
     app,
     applications,
   }: {
     app: App;
     applications: IWebApp[];
-  }): IWebApp | undefined {
+  }): Promise<IWebApp | undefined> {
     const find = applications.find((item) => {
       if (!item?.prefix) return;
 

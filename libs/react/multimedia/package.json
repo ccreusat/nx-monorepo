@@ -1,0 +1,27 @@
+{
+  "name": "@ccreusat-monorepo/multimedia",
+  "private": false,
+  "version": "0.0.1",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "@ccreusat-monorepo/icons": "0.0.1",
+    "@ccreusat-monorepo/ui-library": "0.0.1",
+    "clsx": "2.1.0",
+    "@ccreusat-monorepo/client": "0.0.1",
+    "react-i18next": "14.1.0",
+    "pako": "2.1.0",
+    "@pixi/react": "7.1.2",
+    "pixi.js": "8.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

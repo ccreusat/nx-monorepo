@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { App, ERROR_CODE } from '../globals';
 import {
   IGetSession,
@@ -116,7 +115,7 @@ export class SessionService {
 
   async getCurrentLanguage(
     user: IUserInfo | undefined
-    // @ts-expect-error
+    // @ts-ignore
   ): Promise<string | undefined> {
     const isUserSignin = user?.sessionMetadata && user?.sessionMetadata.userId;
 
@@ -225,7 +224,7 @@ export class SessionService {
     }
 
     const bookmarkedApps: IWebApp[] = [];
-    myApps.bookmarks.forEach((appName) => {
+    myApps.bookmarks.forEach((appName, index) => {
       const foundApp = (user?.apps || []).find(
         (app: IWebApp) => app.name === appName
       );

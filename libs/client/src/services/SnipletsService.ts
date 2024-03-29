@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable no-async-promise-executor */
 import { TimelinegeneratorBehaviour } from '../resources/behaviours/TimelinegeneratorBehaviour';
 import { App, ERROR_CODE, ResourceType } from '../globals';
 import { IOdeServices } from './OdeServices';
@@ -91,7 +90,7 @@ export class SnipletsService {
     currentApp: App
   ): Promise<App[]> {
     const http = context.http();
-    return new Promise<App[]>(async (resolve) => {
+    return new Promise<App[]>(async (resolve, reject) => {
       if (!this.resourceProducingApps.length) {
         // Default to current app and workspace
         this.resourceProducingApps = [currentApp, 'workspace'];

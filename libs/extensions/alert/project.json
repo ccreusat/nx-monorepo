@@ -1,0 +1,32 @@
+{
+  "name": "alert",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/extensions/alert/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/extensions/alert",
+        "main": "libs/extensions/alert/src/index.ts",
+        "tsConfig": "libs/extensions/alert/tsconfig.lib.json",
+        "assets": ["libs/extensions/alert/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/libs/extensions/{projectName}"
+      }
+    }
+  },
+  "tags": [],
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/libs/extensions/{projectName}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  }
+}

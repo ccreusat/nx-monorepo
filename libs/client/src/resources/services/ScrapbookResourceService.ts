@@ -1,13 +1,21 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { IResource, ResourceType } from '../..';
-import { ScrapbookUpdate, UpdateResult } from '../interface';
+import {
+  CreateParameters,
+  CreateResult,
+  ScrapbookUpdate,
+  UpdateResult,
+} from '../interface';
 import { ResourceService } from '../ResourceService';
 
 const APP = 'scrapbook';
 const RESOURCE = 'scrapbook';
 
-// @ts-expect-error
 export class ScrapbookResourceService extends ResourceService {
+  override create<T extends CreateParameters>(
+    parameters: T
+  ): Promise<CreateResult> {
+    throw new Error('Method not implemented.');
+  }
   async update(parameters: ScrapbookUpdate): Promise<UpdateResult> {
     const thumbnail = await this.getThumbnailPath(parameters.thumbnail);
     const res = await this.http.put<IResource>(

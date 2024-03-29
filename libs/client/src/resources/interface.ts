@@ -1,4 +1,4 @@
-import { App, ID, ResourceType, RightRole, RightStringified } from "..";
+import { App, ID, ResourceType, RightRole, RightStringified } from '..';
 
 /**
  * Resources management service.
@@ -22,17 +22,17 @@ export interface IResourceService {
   /** Delete folders and/or resources. */
   deleteAll(
     parameters: DeleteParameters,
-    useAssetId?: boolean,
+    useAssetId?: boolean
   ): Promise<IActionResult>;
   /** Trash folders and/or resources. */
   trashAll(
     parameters: DeleteParameters,
-    useAssetId?: boolean,
+    useAssetId?: boolean
   ): Promise<IActionResult>;
   /** Restore folders and/or resources from trash. */
   restoreAll(
     parameters: DeleteParameters,
-    useAssetId?: boolean,
+    useAssetId?: boolean
   ): Promise<IActionResult>;
 
   //--------------------------------------- SEARCH
@@ -50,7 +50,7 @@ export interface IResourceService {
   /** Move resources/folders to a folder. */
   moveToFolder(
     parameters: MoveParameters,
-    useAssetId?: boolean,
+    useAssetId?: boolean
   ): Promise<IActionResult>;
   /** List subfolders of a parent folder. */
   listSubfolders(folderId: ID): Promise<GetSubFoldersResult>;
@@ -108,47 +108,45 @@ export interface IResource {
  * MUST BE typed and implemented in this application's agent.
  */
 export const ACTION = {
-  SEARCH: "search",
-  CREATE: "create",
-  CREATE_PUBLIC: "createPublic",
-  OPEN: "open",
-  EDIT: "edit",
-  MANAGE: "manage", // Query properties metadata
-  UPD_PROPS: "properties", // Update properties
-  COMMENT: "comment",
-  DELETE: "delete",
-  TRASH: "trash",
-  RESTORE: "restore",
-  MOVE: "move",
-  COPY: "copy",
-  EXPORT: "export",
-  SHARE: "share",
-  PRINT: "print",
+  SEARCH: 'search',
+  CREATE: 'create',
+  OPEN: 'open',
+  MANAGE: 'manage', // Query properties metadata
+  UPD_PROPS: 'properties', // Update properties
+  COMMENT: 'comment',
+  DELETE: 'delete',
+  TRASH: 'trash',
+  RESTORE: 'restore',
+  MOVE: 'move',
+  COPY: 'copy',
+  EXPORT: 'export',
+  SHARE: 'share',
+  PRINT: 'print',
 
   /* FIXME only core actions here ! */
-  PAGES_LIST: "pages_list",
-  DISTRIBUTE: "distribute",
-  REGISTER: "register",
-  PUBLISH: "publish",
-  PUBLISH_MOODLE: "publish_moodle",
+  PAGES_LIST: 'pages_list',
+  DISTRIBUTE: 'distribute',
+  REGISTER: 'register',
+  PUBLISH: 'publish',
+  PUBLISH_MOODLE: 'publish_moodle',
 } as const;
 export type ActionType = (typeof ACTION)[keyof typeof ACTION];
 
 /** Constant folders IDs */
 export const FOLDER = {
   /** Special ID of the bin, or trash folder. */
-  BIN: "bin",
+  BIN: 'bin',
   /** Special ID of the root folder. */
-  DEFAULT: "default",
+  DEFAULT: 'default',
 } as const;
 export type FolderType = (typeof FOLDER)[keyof typeof FOLDER];
 
 /** Constant search filters IDs, having a boolean type. */
 export const BOOLEAN_FILTER = {
-  OWNER: "owner",
-  SHARED: "shared",
-  PUBLIC: "public",
-  FAVORITE: "favorite",
+  OWNER: 'owner',
+  SHARED: 'shared',
+  PUBLIC: 'public',
+  FAVORITE: 'favorite',
 } as const;
 export type BooleanFilterType =
   (typeof BOOLEAN_FILTER)[keyof typeof BOOLEAN_FILTER];
@@ -161,17 +159,17 @@ export type BooleanFilterType =
 
 /** Sort orders. */
 export const SORT_ORDER = {
-  ASC: "asc",
-  DESC: "desc",
+  ASC: 'asc',
+  DESC: 'desc',
 } as const;
 export type SortOrderType = (typeof SORT_ORDER)[keyof typeof SORT_ORDER];
 /** Sortable fields. */
 export const SORT_BY = {
-  NAME: "name",
-  MODIFY_DATE: "updatedAt",
-  CREATED_AT: "createdAt",
-  APPLICATION: "application",
-  RESOURCE_TYPE: "resourceType",
+  NAME: 'name',
+  MODIFY_DATE: 'updatedAt',
+  CREATED_AT: 'createdAt',
+  APPLICATION: 'application',
+  RESOURCE_TYPE: 'resourceType',
   /*
 //FIXME On devrait pouvoir trier sur tout champ issu d'un type de ressource (name, createdAt, creatorId...) voir IResource
   createdAt: string;
@@ -202,7 +200,7 @@ export interface IAction {
   workflow: string;
   /** Thruthy if the user owns the corresponding right. */
   available: boolean;
-  target?: "actionbar" | "tree";
+  target?: 'actionbar';
   right?: RightRole;
   //FIXME comment relier les actions aux behaviours, qu'on va remplacer.
 }
@@ -276,8 +274,8 @@ export interface CreateResult {
   description?: string;
   visibility?: string;
   trashed?: boolean;
-  "publish-type"?: string;
-  "comment-type"?: string;
+  'publish-type'?: string;
+  'comment-type'?: string;
   created?: { $date: string };
   modified?: { $date: string };
   author?: { userId: string; username: string; login: string };
@@ -331,7 +329,7 @@ export interface PublishResult extends IActionResult {
 //--------------------------------------- SEARCH
 export interface IPreferences {
   //-------------------------------------
-  view: "card" | "list";
+  view: 'card' | 'list';
 }
 export interface ISearchParameters {
   /* app: App;  @deprecated, replaced by 'application' in IActionParameters */
@@ -368,7 +366,7 @@ export type GetContextResult = IActionResult & IContext;
 export interface CreateFolderParameters extends IActionParameters {
   /* app: App;  @deprecated, replaced by 'application' in IActionParameters */
   type?: ResourceType;
-  parentId: ID | "default";
+  parentId: ID | 'default';
   name: string;
 }
 /** Response when creating a folder */
@@ -382,13 +380,13 @@ export interface UpdateFolderParameters extends IActionParameters {
   folderId: ID;
   /* app: App;  @deprecated, replaced by 'application' in IActionParameters */
   type: ResourceType;
-  parentId: ID | "default";
+  parentId: ID | 'default';
   name: string;
 }
 /** Response when updating a folder */
 export interface UpdateFolderResult extends CreateFolderResult {
   updatedAt: string;
-  parentId: ID | "default";
+  parentId: ID | 'default';
 }
 
 /** Parameters expected to move folders and/or resources */
@@ -436,29 +434,29 @@ export interface UpdateResult {
 }
 
 export interface BlogUpdate extends UpdateParameters {
-  "publish-type"?: "RESTRAINT" | "IMMEDIATE";
+  'publish-type'?: 'RESTRAINT' | 'IMMEDIATE';
 }
 
 export interface BlogResource extends IResource {
-  "publish-type": "RESTRAINT" | "IMMEDIATE";
+  'publish-type': 'RESTRAINT' | 'IMMEDIATE';
 }
 
 export interface MindmapUpdate extends UpdateParameters {
-  "publish-type"?: "RESTRAINT" | "IMMEDIATE";
+  'publish-type'?: 'RESTRAINT' | 'IMMEDIATE';
 }
 
 export interface MindmapResource extends IResource {
-  "publish-type": "RESTRAINT" | "IMMEDIATE";
+  'publish-type': 'RESTRAINT' | 'IMMEDIATE';
 }
 
 export interface CollaborativewallUpdate extends UpdateParameters {
-  "publish-type"?: "RESTRAINT" | "IMMEDIATE";
+  'publish-type'?: 'RESTRAINT' | 'IMMEDIATE';
 }
 
 export interface CollaborativewallResource extends IResource {
-  "publish-type": "RESTRAINT" | "IMMEDIATE";
+  'publish-type': 'RESTRAINT' | 'IMMEDIATE';
 }
 
-export type ScrapbookUpdate = UpdateParameters
+export interface ScrapbookUpdate extends UpdateParameters {}
 
-export type ScrapbookResource = IResource
+export interface ScrapbookResource extends IResource {}

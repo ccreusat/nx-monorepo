@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { App, IResource, ResourceType } from '../..';
 import {
   CreateParameters,
@@ -11,8 +10,10 @@ import { ResourceService } from '../ResourceService';
 const APP = 'mindmap';
 const RESOURCE = 'mindmap';
 
-// @ts-expect-error
 export class MindmapResourceService extends ResourceService {
+  override getEditUrl(resourceId?: string | undefined): string {
+    throw new Error('Method not implemented.');
+  }
   async create(parameters: CreateParameters): Promise<CreateResult> {
     const thumbnail = parameters.thumbnail
       ? await this.getThumbnailPath(parameters.thumbnail)

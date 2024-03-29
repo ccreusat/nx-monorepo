@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { App, IResource, ResourceType } from '../..';
 import {
   CollaborativewallUpdate,
@@ -11,8 +10,10 @@ import { ResourceService } from '../ResourceService';
 const APP = 'collaborativewall';
 const RESOURCE = 'collaborativewall';
 
-// @ts-expect-error
 export class CollaborativewallResourceService extends ResourceService {
+  override getEditUrl(resourceId?: string | undefined): string {
+    throw new Error('Method not implemented.');
+  }
   async create(parameters: CreateParameters): Promise<CreateResult> {
     const thumbnail = await this.getThumbnailPath(parameters.thumbnail);
     const res = await this.http.post<CreateResult>(`/collaborativewall`, {

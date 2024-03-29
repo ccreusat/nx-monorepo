@@ -1,9 +1,11 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { ERROR_CODE, ID, IHttpParams, ResourceType } from '../..';
 import { CacheService } from '../../cache/Service';
 import { IOdeServices } from '../../services/OdeServices';
 import {
+  CopyParameters,
+  CopyResult,
   GetContextParameters,
+  GetResourceParameters,
   IResource,
   IResourceService,
   ISearchResults,
@@ -36,7 +38,6 @@ export interface ILinkedResource extends IResource {
  * Facade for the old-fashioned way of listing resources => behaviours.loadResources()
  * Any other functionality is unavailable.
  */
-// @ts-expect-error
 export abstract class AbstractBehaviourService implements IResourceService {
   abstract APP: string;
   abstract RESOURCE: ResourceType;
@@ -51,8 +52,11 @@ export abstract class AbstractBehaviourService implements IResourceService {
   constructor(protected context: IOdeServices) {
     this._cache = new CacheService(this.context);
   }
+  copy<T extends CopyParameters>(parameters: T): Promise<CopyResult> {
+    throw new Error('Method not implemented.');
+  }
 
-  searchResource(): Promise<IResource> {
+  searchResource(parameters: GetResourceParameters): Promise<IResource> {
     throw new Error('Method not implemented.');
   }
 

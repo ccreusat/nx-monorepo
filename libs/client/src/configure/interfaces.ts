@@ -1,6 +1,6 @@
-import { App, USER_PREFS } from "../globals";
-import { IWebApp } from "../session/interfaces";
-import { configure } from "./Framework";
+import { App, USER_PREFS } from '../globals';
+import { IWebApp } from '../session/interfaces';
+import { configure } from './Framework';
 
 //-------------------------------------
 export abstract class ConfigurationFrameworkFactory {
@@ -39,7 +39,7 @@ export interface IConfigurationFramework {
     readonly analytics: {
       /** Get a tracker parameters. */
       parameters<T extends ITrackingParams>(
-        type: TrackingType,
+        type: TrackingType
       ): Promise<T | undefined>;
       /**
        * Get the XiTi configuration.
@@ -75,8 +75,8 @@ export interface IConfigurationFramework {
   };
 }
 
-export type AnalyticStatus = "void" | "pending" | "ready" | "failed";
-export type TrackingType = "matomo" | "internal";
+export type AnalyticStatus = 'void' | 'pending' | 'ready' | 'failed';
+export type TrackingType = 'matomo' | 'internal';
 export interface ITrackingParams {
   /** Whitelist of events to track, in the form "app" or "app.eventName" or "*.eventName". */
   trackOnly: string[];
@@ -157,7 +157,7 @@ export interface ITheme {
   listSkins(): Promise<IThemeConfOverriding[]>;
 
   /** Get the help path, which can be dedicated to 1D or 2D. */
-  getHelpPath(): Promise<string>;
+  getHelpPath(): Promise<String>;
 }
 
 //-------------------------------------
@@ -182,7 +182,7 @@ export interface IThemeConf {
 //-------------------------------------
 export interface IThemeConfOverriding {
   //-------------------------------------
-  parent: "panda" | "theme-open-ent";
+  parent: 'panda' | 'theme-open-ent';
   child: string;
   bootstrapVersion: string;
   skins: Array<string>;

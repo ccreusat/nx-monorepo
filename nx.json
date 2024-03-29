@@ -1,44 +1,45 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
-    ],
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
       "!{projectRoot}/eslint.config.js",
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
       "!{projectRoot}/tsconfig.spec.json",
-      "!{projectRoot}/.svgrrc.cjs"
+      "!{projectRoot}/.svgrrc.cjs",
+      "!{projectRoot}/.rollup.config.js",
+      "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)",
+      "!{projectRoot}/.storybook/**/*",
+      "!{projectRoot}/tsconfig.storybook.json"
     ],
     "sharedGlobals": []
   },
   "targetDefaults": {
     "@nx/vite:build": {
       "cache": true,
-      "dependsOn": [
-        "^build"
-      ],
-      "inputs": [
-        "production",
-        "^production"
-      ]
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    },
+    "@nx/rollup:rollup": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     },
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        "dist/{projectRoot}"
-      ],
-      "cache": true
+      "dependsOn": ["^build"],
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "cache": true,
+      "inputs": ["production", "^production"]
     },
     "typecheck": {
       "cache": true
     },
     "lint": {
+      "cache": true
+    },
+    "build-storybook": {
       "cache": true
     }
   },
@@ -64,6 +65,21 @@
       "options": {
         "targetName": "lint"
       }
+    },
+    {
+      "plugin": "@nx/rollup/plugin",
+      "options": {
+        "buildTargetName": "build"
+      }
+    },
+    {
+      "plugin": "@nx/storybook/plugin",
+      "options": {
+        "buildStorybookTargetName": "build-storybook",
+        "serveStorybookTargetName": "storybook",
+        "testStorybookTargetName": "test-storybook",
+        "staticStorybookTargetName": "static-storybook"
+      }
     }
   ],
   "generators": {
@@ -75,15 +91,18 @@
   },
   "release": {
     "projectsRelationship": "independent",
-    "projects": [
-      "libs/*"
-    ],
+    "projects": ["libs/*"],
     "version": {
       "preVersionCommand": "pnpm dlx nx run-many -t build",
       "conventionalCommits": true
     },
     "changelog": {
       "projectChangelogs": true
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "options": {}
     }
   }
 }
