@@ -1,6 +1,10 @@
 {
   "name": "@ccreusat-monorepo/tiptap-extension-alert",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccreusat/nx-monorepo"
+  },
   "dependencies": {
     "@tiptap/core": "2.2.4"
   },
