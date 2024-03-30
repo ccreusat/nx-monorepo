@@ -47,7 +47,7 @@ jobs:
             ~/.cache/Cypress # needed for the Cypress binary
           key: npm-dependencies-${{ hashFiles('pnpm-lock.yaml') }}
       - name: Build
-        run: pnpm nx run-many -t build
+        run: pnpm nx nx affected:build --base=origin/${{ github.ref_name }}
       - name: Version & Publish
         run: |
           git config user.name "${{ github.actor }}"
