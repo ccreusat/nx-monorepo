@@ -145,7 +145,7 @@ export class Http implements IHttp {
 
   private mapAxiosResponse<R>(
     response: AxiosResponse<R>,
-    params?: IHttpParams
+    _params?: IHttpParams
   ): R {
     // AxiosResponse and our HttpResponse share the same properties.
     // So we can use it directly, saving CPU and memory.
@@ -261,7 +261,7 @@ export class Http implements IHttp {
   loadScript(url: string, params?: IHttpParams): Promise<void> {
     return loadedScripts[url]
       ? Promise.resolve()
-      : this.getScript(url, params).then((res) => {
+      : this.getScript(url, params).then(() => {
           loadedScripts[url] = true;
         });
   }

@@ -1,0 +1,51 @@
+{
+  "name": "editor",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/react/editor/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "dependsOn": [
+        "lint"
+      ],
+      "executor": "@nx/vite:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/react/editor",
+        "main": "libs/react/editor/src/index.ts",
+        "tsConfig": "libs/react/editor/tsconfig.lib.json",
+        "assets": [
+          "libs/react/editor/*.md"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/react/editor/**/*.{ts,tsx,js,jsx}",
+          "libs/react/editor/package.json"
+        ]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/libs/react/{projectName}"
+      }
+    }
+  },
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/libs/react/{projectName}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  }
+}

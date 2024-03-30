@@ -1,0 +1,15 @@
+{
+  "name": "@ccreusat-monorepo/tiptap-extension-hyperlink",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccreusat/nx-monorepo"
+  },
+  "dependencies": {},
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "typings": "./index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  }
+}

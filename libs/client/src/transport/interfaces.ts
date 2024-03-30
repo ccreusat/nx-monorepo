@@ -1,4 +1,6 @@
-import { transport } from "./Framework";
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
+import { transport } from './Framework';
 
 //-------------------------------------
 export abstract class TransportFrameworkFactory {
@@ -49,14 +51,14 @@ export interface IHttp {
   postJson<T = any, R = any>(
     url: string,
     json: any,
-    params?: IHttpParams,
+    params?: IHttpParams
   ): Promise<R>;
 
   /** HTTP PUT, Accept: application/json */
   put<T = any, R = any>(
     url: string,
     data?: any,
-    params?: IHttpParams,
+    params?: IHttpParams
   ): Promise<R>;
 
   //    putFile<T=any,R=any>( url:string, data:FormData, opt?:any ): Promise<R>;
@@ -65,7 +67,7 @@ export interface IHttp {
   putJson<T = any, R = any>(
     url: string,
     json: any,
-    params?: IHttpParams,
+    params?: IHttpParams
   ): Promise<R>;
 
   /** HTTP DELETE */
@@ -81,7 +83,7 @@ export interface IHttp {
   getScript<R = any>(
     url: string,
     params?: IHttpParams,
-    exportedVariableName?: string,
+    exportedVariableName?: string
   ): Promise<R>;
 
   /** HTTP GET, Accept: application/javascript */
@@ -91,12 +93,12 @@ export interface IHttp {
 }
 
 export type IHttpParamsResponseType =
-  | "arraybuffer"
-  | "blob"
-  | "document"
-  | "json"
-  | "text"
-  | "stream";
+  | 'arraybuffer'
+  | 'blob'
+  | 'document'
+  | 'json'
+  | 'text'
+  | 'stream';
 
 //-------------------------------------
 export type IHttpParams = {

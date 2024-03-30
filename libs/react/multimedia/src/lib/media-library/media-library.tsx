@@ -22,9 +22,9 @@ import {
 import { WorkspaceElement } from '@ccreusat-monorepo/client';
 import { useTranslation } from 'react-i18next';
 
-import { InnerTabs } from './innertabs';
-import { ExternalLinkTabProps } from './innertabs/external-link';
+import { ExternalLink, ExternalLinkTabProps } from './innertabs/external-link';
 import {
+  InternalLink,
   InternalLinkTabProps,
   InternalLinkTabResult,
 } from './innertabs/internal-link';
@@ -38,6 +38,12 @@ import {
   useHasWorkflow,
   useHttpErrorToast,
 } from '@ccreusat-monorepo/ui-library';
+import { Audio } from './innertabs/audio';
+import { Video } from './innertabs/video';
+import { Workspace } from './innertabs/workspace';
+import { Iframe } from './innertabs/iframe';
+import { VideoEmbedder } from './innertabs/video-embedder';
+import { Upload } from './innertabs/upload';
 
 //---------------------------------------------------
 // Tabs parameters
@@ -177,7 +183,7 @@ export interface MediaLibraryProps {
 //---------------------------------------------------
 // Media Library implementation
 //---------------------------------------------------
-export const MediaLibrary = forwardRef(
+export const Root = forwardRef(
   (
     { appCode, multiple, onSuccess, onCancel, onTabChange }: MediaLibraryProps,
     ref: Ref<MediaLibraryRef>
@@ -471,6 +477,15 @@ export const MediaLibrary = forwardRef(
 );
 
 // Add inner tabs implementations to exported component.
-Object.assign(MediaLibrary, InnerTabs);
+const InnerTabs = {
+  Audio,
+  Video,
+  Upload,
+  ExternalLink,
+  Workspace,
+  InternalLink,
+  Iframe,
+  VideoEmbedder,
+};
 
-export default MediaLibrary;
+export const MediaLibrary = Object.assign(Root, InnerTabs);

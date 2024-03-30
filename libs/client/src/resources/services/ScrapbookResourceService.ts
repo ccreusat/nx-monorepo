@@ -12,7 +12,7 @@ const RESOURCE = 'scrapbook';
 
 export class ScrapbookResourceService extends ResourceService {
   override create<T extends CreateParameters>(
-    parameters: T
+    _parameters: T
   ): Promise<CreateResult> {
     throw new Error('Method not implemented.');
   }

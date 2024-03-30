@@ -1,0 +1,17 @@
+{
+  "name": "@ccreusat-monorepo/tiptap-extension-mathjax",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccreusat/nx-monorepo"
+  },
+  "dependencies": {
+    "@tiptap/core": "2.2.4"
+  },
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "typings": "./index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  }
+}

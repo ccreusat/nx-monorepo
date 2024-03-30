@@ -120,7 +120,7 @@ export class Theme implements ITheme {
   }
 
   private loadConnected(version: string): Promise<void> {
-    return new Promise<void>((resolve, reject) => {
+    return new Promise<void>((resolve) => {
       this.loadDefaultTheme(version).then(() => {
         this._onSkinReady.resolve(this);
         transport.http

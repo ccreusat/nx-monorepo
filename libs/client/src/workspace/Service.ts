@@ -1,7 +1,7 @@
-import { IOdeServices } from "../services/OdeServices";
-import { DocumentHelper } from "../utils/DocumentHelper";
-import { WorkspaceElement, WorkspaceSearchFilter } from "./interface";
-import { ID } from "../globals";
+import { IOdeServices } from '../services/OdeServices';
+import { DocumentHelper } from '../utils/DocumentHelper';
+import { WorkspaceElement, WorkspaceSearchFilter } from './interface';
+import { ID } from '../globals';
 
 interface ElementQuery {
   /**
@@ -54,21 +54,21 @@ export class WorkspaceService {
   }
 
   private extractMetadata(file: Blob | File) {
-    const tmpName = file.name || "";
-    const nameSplit = tmpName.split(".");
-    const contentType = file.type || "application/octet-stream";
+    const tmpName = file.name || '';
+    const nameSplit = tmpName.split('.');
+    const contentType = file.type || 'application/octet-stream';
     const extension =
-      nameSplit.length > 1 ? nameSplit[nameSplit.length - 1] : "";
+      nameSplit.length > 1 ? nameSplit[nameSplit.length - 1] : '';
     const metadata = {
-      "content-type": contentType,
+      'content-type': contentType,
       filename: tmpName,
       size: file.size,
       extension,
       role: DocumentHelper.role(contentType, false, extension),
     };
-    const basename = tmpName.replace("." + metadata.extension, "");
+    const basename = tmpName.replace('.' + metadata.extension, '');
     const fullname = metadata.extension
-      ? basename + "." + metadata.extension
+      ? basename + '.' + metadata.extension
       : basename;
     return { basename, fullname, metadata };
   }
@@ -77,24 +77,24 @@ export class WorkspaceService {
     file: Blob | File,
     params?: {
       parentId?: string;
-      visibility?: "public" | "protected";
+      visibility?: 'public' | 'protected';
       application?: string;
-    },
+    }
   ) {
     //prepare metadata
     const { fullname, metadata } = this.extractMetadata(file);
     //prepare form data
     const formData = new FormData();
-    formData.append("file", file, fullname);
+    formData.append('file', file, fullname);
     //add query params
     const args = [];
-    if (params?.visibility === "public" || params?.visibility === "protected") {
+    if (params?.visibility === 'public' || params?.visibility === 'protected') {
       args.push(`${params.visibility}=true`);
     }
     if (params?.application) {
       args.push(`application=${params.application}`);
     }
-    if (metadata.role === "img") {
+    if (metadata.role === 'img') {
       args.push(`quality=1`);
     }
     if (params?.parentId) {
@@ -102,8 +102,8 @@ export class WorkspaceService {
     }
     //make query
     const res = await this.http.postFile<WorkspaceElement>(
-      `/workspace/document?${args.join("&")}`,
-      formData,
+      `/workspace/document?${args.join('&')}`,
+      formData
     );
     if (this.isAxiosError) {
       throw this.http.latestResponse.statusText;
@@ -117,16 +117,16 @@ export class WorkspaceService {
     params?: {
       alt?: string;
       legend?: string;
-    },
+    }
   ) {
     //prepare metadata
     const { fullname, metadata } = this.extractMetadata(file);
     //prepare form data
     const formData = new FormData();
-    formData.append("file", file, fullname);
+    formData.append('file', file, fullname);
     //add query params
     const args = [];
-    if (metadata.role === "img") {
+    if (metadata.role === 'img') {
       args.push(`quality=1`);
     }
     if (params?.alt) {
@@ -137,8 +137,8 @@ export class WorkspaceService {
     }
     //make query
     const res = await this.http.putFile<WorkspaceElement>(
-      `/workspace/document/${id}?${args.join("&")}`,
-      formData,
+      `/workspace/document/${id}?${args.join('&')}`,
+      formData
     );
     if (this.isAxiosError) {
       throw this.http.latestResponse.statusText;
@@ -160,7 +160,7 @@ export class WorkspaceService {
     }
   }
 
-  private async acceptDocuments(params: ElementQuery) {
+  private async acceptDocuments(_: ElementQuery) {
     const userInfo = await this.context.session().getUser();
     return (current: WorkspaceElement) => {
       //filter by trasherid
@@ -180,11 +180,11 @@ export class WorkspaceService {
   }
 
   private async fetchDocuments(
-    params: ElementQuery,
+    params: ElementQuery
   ): Promise<WorkspaceElement[]> {
     const filesO: WorkspaceElement[] =
-      params.filter !== "external" || params.parentId
-        ? await this.http.get<WorkspaceElement[]>("/workspace/documents", {
+      params.filter !== 'external' || params.parentId
+        ? await this.http.get<WorkspaceElement[]>('/workspace/documents', {
             queryParams: { ...params, _: new Date().getTime() },
           })
         : [];
@@ -194,7 +194,7 @@ export class WorkspaceService {
 
   async listDocuments(
     filter: WorkspaceSearchFilter,
-    parentId?: ID,
+    parentId?: ID
   ): Promise<WorkspaceElement[]> {
     return this.fetchDocuments({ filter, parentId, includeall: true });
   }

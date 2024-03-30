@@ -1,0 +1,36 @@
+{
+  "name": "speech-synthesis",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/extensions/speech-synthesis/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/extensions/speech-synthesis",
+        "main": "libs/extensions/speech-synthesis/src/index.ts",
+        "tsConfig": "libs/extensions/speech-synthesis/tsconfig.lib.json",
+        "assets": [
+          "libs/extensions/speech-synthesis/*.md"
+        ]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/libs/extensions/{projectName}"
+      }
+    }
+  },
+  "tags": [],
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/libs/extensions/{projectName}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  }
+}

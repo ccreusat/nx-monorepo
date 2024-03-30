@@ -1,0 +1,60 @@
+{
+  "name": "@ccreusat-monorepo/editor",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccreusat/nx-monorepo"
+  },
+  "version": "0.0.1",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "@ccreusat-monorepo/icons": "0.0.1",
+    "@ccreusat-monorepo/ui-library": "0.0.1",
+    "@tiptap/react": "2.2.4",
+    "react-i18next": "14.1.0",
+    "@ccreusat-monorepo/multimedia": "0.0.1",
+    "clsx": "2.1.0",
+    "@tiptap/starter-kit": "2.2.4",
+    "@tiptap-pro/extension-mathematics": "2.7.7",
+    "react-dom": "18.2.0",
+    "@ccreusat-monorepo/client": "0.0.1",
+    "@tiptap/extension-text-align": "2.2.4",
+    "@tiptap/extension-text-style": "2.2.4",
+    "@tiptap/extension-typography": "2.2.4",
+    "@tiptap/extension-underline": "2.2.4",
+    "@tiptap/extension-superscript": "2.2.4",
+    "@tiptap/extension-table": "2.2.4",
+    "@tiptap/extension-table-row": "2.2.4",
+    "emoji-picker-react": "4.9.2",
+    "@ccreusat-monorepo/tiptap-extension-attachment": "0.0.1",
+    "@ccreusat-monorepo/tiptap-extension-alert": "0.0.1",
+    "@tiptap/extension-color": "2.2.4",
+    "@tiptap/extension-focus": "2.2.4",
+    "@tiptap/extension-font-family": "2.2.4",
+    "@tiptap/extension-subscript": "2.2.4",
+    "@tiptap/extension-table-header": "2.2.4",
+    "@ccreusat-monorepo/tiptap-extension-image": "0.0.1",
+    "@ccreusat-monorepo/tiptap-extension-audio": "0.0.1",
+    "@ccreusat-monorepo/tiptap-extension-linker": "0.0.1",
+    "@ccreusat-monorepo/tiptap-extension-video": "0.0.1",
+    "@ccreusat-monorepo/tiptap-extension-hyperlink": "0.0.1",
+    "@ccreusat-monorepo/tiptap-extension-font-size": "0.0.1",
+    "@ccreusat-monorepo/tiptap-extension-heading": "0.0.1",
+    "@ccreusat-monorepo/tiptap-extension-highlight": "0.0.1",
+    "@ccreusat-monorepo/tiptap-extension-iframe": "0.0.1",
+    "@ccreusat-monorepo/tiptap-extension-table-cell": "0.0.1",
+    "@ccreusat-monorepo/tiptap-extension-speech-recognition": "0.0.1",
+    "@ccreusat-monorepo/tiptap-extension-speech-synthesis": "0.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -52,11 +52,11 @@ export abstract class AbstractBehaviourService implements IResourceService {
   constructor(protected context: IOdeServices) {
     this._cache = new CacheService(this.context);
   }
-  copy<T extends CopyParameters>(parameters: T): Promise<CopyResult> {
+  copy<T extends CopyParameters>(_parameters: T): Promise<CopyResult> {
     throw new Error('Method not implemented.');
   }
 
-  searchResource(parameters: GetResourceParameters): Promise<IResource> {
+  searchResource(_parameters: GetResourceParameters): Promise<IResource> {
     throw new Error('Method not implemented.');
   }
 

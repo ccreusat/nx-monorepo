@@ -154,9 +154,7 @@ export const InternalLinker = ({
       if (index < 0) {
         selectResource(resource);
       } else {
-        setSelectedDocuments(
-          selectedDocuments.filter((value, i) => i !== index)
-        );
+        setSelectedDocuments(selectedDocuments.filter((_, i) => i !== index));
       }
     },
     [getSelectedResourceIndex, selectResource, selectedDocuments]

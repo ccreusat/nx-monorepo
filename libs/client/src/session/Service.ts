@@ -224,7 +224,7 @@ export class SessionService {
     }
 
     const bookmarkedApps: IWebApp[] = [];
-    myApps.bookmarks.forEach((appName, index) => {
+    myApps.bookmarks.forEach((appName) => {
       const foundApp = (user?.apps || []).find(
         (app: IWebApp) => app.name === appName
       );

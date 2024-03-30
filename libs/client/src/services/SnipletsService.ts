@@ -90,7 +90,7 @@ export class SnipletsService {
     currentApp: App
   ): Promise<App[]> {
     const http = context.http();
-    return new Promise<App[]>(async (resolve, reject) => {
+    return new Promise<App[]>(async (resolve) => {
       if (!this.resourceProducingApps.length) {
         // Default to current app and workspace
         this.resourceProducingApps = [currentApp, 'workspace'];

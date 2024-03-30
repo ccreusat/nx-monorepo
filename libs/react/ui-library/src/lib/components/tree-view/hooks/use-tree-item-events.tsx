@@ -1,6 +1,5 @@
 export default function useTreeItemEvents(
   nodeId: string,
-  label: string,
   expanded: boolean,
   setExpanded: Function,
   onItemSelect: Function | undefined,

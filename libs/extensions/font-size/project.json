@@ -1,0 +1,36 @@
+{
+  "name": "font-size",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/extensions/font-size/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/extensions/font-size",
+        "main": "libs/extensions/font-size/src/index.ts",
+        "tsConfig": "libs/extensions/font-size/tsconfig.lib.json",
+        "assets": [
+          "libs/extensions/font-size/*.md"
+        ]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/libs/extensions/{projectName}"
+      }
+    }
+  },
+  "tags": [],
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/libs/extensions/{projectName}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  }
+}

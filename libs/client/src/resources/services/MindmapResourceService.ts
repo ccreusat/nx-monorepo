@@ -11,7 +11,7 @@ const APP = 'mindmap';
 const RESOURCE = 'mindmap';
 
 export class MindmapResourceService extends ResourceService {
-  override getEditUrl(resourceId?: string | undefined): string {
+  override getEditUrl(_resourceId?: string | undefined): string {
     throw new Error('Method not implemented.');
   }
   async create(parameters: CreateParameters): Promise<CreateResult> {

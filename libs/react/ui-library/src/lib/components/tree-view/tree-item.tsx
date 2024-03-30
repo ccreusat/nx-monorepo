@@ -89,7 +89,6 @@ const TreeItem = (props: TreeItemProps) => {
     handleItemBlur,
   } = useTreeItemEvents(
     nodeId,
-    label,
     expanded,
     setExpanded,
     onItemSelect,

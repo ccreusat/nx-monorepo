@@ -12,6 +12,8 @@ export * from './button/button';
 export * from './card/card';
 export * from './checkbox/checkbox';
 export * from './color-picker/color-picker';
+export * from './color-picker/color-palette';
+export * from './color-picker/color-picker-item';
 export * from './combobox/combobox';
 export * from './dropdown/dropdown';
 export * from './dropzone/dropzone';

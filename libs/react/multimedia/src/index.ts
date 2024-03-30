@@ -5,5 +5,6 @@ export * from './lib/linker-card/linker-card';
 export * from './lib/linker/external-linker';
 export * from './lib/linker/internal-linker';
 export * from './lib/media-library/media-library';
+export * from './lib/media-library/innertabs/internal-link';
 export * from './lib/video-recorder/video-recorder';
 export * from './lib/workspace/workspace';
