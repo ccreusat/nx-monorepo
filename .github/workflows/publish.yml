@@ -65,8 +65,6 @@ jobs:
             pnpm nx release publish --tag ${{ github.ref_name }}
           fi
 
-          pnpm nx release --first-release --skip-publish
-          pnpm nx release publish
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
