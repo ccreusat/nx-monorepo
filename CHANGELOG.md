@@ -1,3 +1,14 @@
+## 0.3.1 (2024-03-30)
+
+
+### 🩹 Fixes
+
+- **client:** remove space between files ([259022a](https://github.com/ccreusat/nx-monorepo/commit/259022a))
+
+### ❤️  Thank You
+
+- Clement Creusat @ccreusat
+
 ## 0.3.0 (2024-03-30)
 
 
