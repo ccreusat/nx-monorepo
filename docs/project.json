@@ -3,7 +3,13 @@
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "docs/src",
   "projectType": "library",
-  "tags": ["type:storybook"],
+  "tags": [
+    "type:storybook"
+  ],
   "// targets": "to see all targets run: nx show project docs --web",
-  "targets": {}
+  "targets": {},
+  "implicitDependencies": [
+    "ui-library",
+    "multimedia"
+  ]
 }

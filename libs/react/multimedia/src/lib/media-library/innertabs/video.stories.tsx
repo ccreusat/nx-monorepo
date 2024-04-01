@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Popover } from './popover';
+import { Video } from './video';
 
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
-const meta: Meta<typeof Popover> = {
-  component: Popover,
-  title: 'Popover',
+const meta: Meta<typeof Video> = {
+  component: Video,
+  title: 'Video',
 };
 export default meta;
-type Story = StoryObj<typeof Popover>;
+type Story = StoryObj<typeof Video>;
 
 export const Primary = {
   args: {},
@@ -19,6 +19,6 @@ export const Heading: Story = {
   args: {},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    expect(canvas.getByText(/Welcome to Popover!/gi)).toBeTruthy();
+    expect(canvas.getByText(/Welcome to Video!/gi)).toBeTruthy();
   },
 };

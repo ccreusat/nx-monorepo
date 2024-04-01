@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { AudioRecorder } from './audio-recorder';
+import { ExternalLink } from './external-link';
 
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
-const meta: Meta<typeof AudioRecorder> = {
-  component: AudioRecorder,
-  title: 'AudioRecorder',
+const meta: Meta<typeof ExternalLink> = {
+  component: ExternalLink,
+  title: 'ExternalLink',
 };
 export default meta;
-type Story = StoryObj<typeof AudioRecorder>;
+type Story = StoryObj<typeof ExternalLink>;
 
 export const Primary = {
   args: {},
@@ -19,6 +19,6 @@ export const Heading: Story = {
   args: {},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    expect(canvas.getByText(/Welcome to AudioRecorder!/gi)).toBeTruthy();
+    expect(canvas.getByText(/Welcome to ExternalLink!/gi)).toBeTruthy();
   },
 };

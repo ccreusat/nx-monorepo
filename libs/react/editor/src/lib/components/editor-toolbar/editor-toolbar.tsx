@@ -34,7 +34,7 @@ import {
   useActionOptions,
   useEditorContext,
   useSpeechRecognition,
-} from '../..';
+} from '../../..';
 import { hasExtension } from '../../utils/has-extension';
 import { hasMark } from '../../utils/has-mark';
 import { hasTextStyle } from '../../utils/has-text-style';

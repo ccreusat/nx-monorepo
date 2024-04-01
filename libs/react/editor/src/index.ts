@@ -1,3 +1,3 @@
-export * from './components';
-export * from './hooks';
-export * from './utils';
+export * from './lib/components';
+export * from './lib/hooks';
+export * from './lib/utils';
