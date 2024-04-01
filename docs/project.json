@@ -10,6 +10,7 @@
   "targets": {},
   "implicitDependencies": [
     "ui-library",
-    "multimedia"
+    "multimedia",
+    "editor"
   ]
 }

@@ -30,14 +30,13 @@ import { EditorToolbarPlusMenu } from './editor-toolbar-plus-menu';
 import { EditorToolbarTextColor } from './editor-toolbar-text-color';
 import { EditorToolbarTextSize } from './editor-toolbar-text-size';
 import { EditorToolbarTypography } from './editor-toolbar-typography';
-import {
-  useActionOptions,
-  useEditorContext,
-  useSpeechRecognition,
-} from '../../..';
+
 import { hasExtension } from '../../utils/has-extension';
 import { hasMark } from '../../utils/has-mark';
 import { hasTextStyle } from '../../utils/has-text-style';
+import { useEditorContext } from '../../hooks/use-editor-context';
+import { useActionOptions } from '../../hooks/use-action-options';
+import { useSpeechRecognition } from '../../hooks/use-speech-recognition';
 
 interface Props {
   /** Ref to a MediaLibrary instance */

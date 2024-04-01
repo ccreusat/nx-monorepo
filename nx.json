@@ -124,7 +124,9 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "options": {}
+      "options": {
+        "cacheableOperations": ["build-storybook"]
+      }
     }
   }
 }
