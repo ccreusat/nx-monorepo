@@ -23,7 +23,7 @@ All libs:
 
 One lib:
 
-`pnpm nx build client`
+`pnpm nx build <project>`
 
 ### Test
 
@@ -33,7 +33,7 @@ All libs:
 
 One lib:
 
-`pnpm nx test client`
+`pnpm nx test <project>`
 
 ### Lint
 
@@ -43,7 +43,7 @@ All libs:
 
 One lib:
 
-`pnpm nx lint client`
+`pnpm nx lint <project>`
 
 ### Lint Fix
 
@@ -53,7 +53,7 @@ All libs:
 
 One lib:
 
-`pnpm nx lint client --fix`
+`pnpm nx lint <project> --fix`
 
 ### Prettier
 

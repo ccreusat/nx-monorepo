@@ -2,7 +2,13 @@
 /dist
 /coverage
 /.nx/cache
-*.json
-*.js
-*.yaml
-*.css
+
+# Ignore everything recursively
+*
+
+# But not the .ts files
+!*.ts
+!*.tsx
+
+# Check subdirectories too
+!*/

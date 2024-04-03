@@ -40,58 +40,58 @@
         "libs/react/multimedia/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-abbr": [
-        "libs/extensions/abbr/src/index.ts"
+        "libs/tiptap/extensions/abbr/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-alert": [
-        "libs/extensions/alert/src/index.ts"
+        "libs/tiptap/extensions/alert/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-attachment": [
-        "libs/extensions/attachment/src/index.ts"
+        "libs/tiptap/extensions/attachment/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-audio": [
-        "libs/extensions/audio/src/index.ts"
+        "libs/tiptap/extensions/audio/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-font-size": [
-        "libs/extensions/font-size/src/index.ts"
+        "libs/tiptap/extensions/font-size/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-heading": [
-        "libs/extensions/heading/src/index.ts"
+        "libs/tiptap/extensions/heading/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-highlight": [
-        "libs/extensions/highlight/src/index.ts"
+        "libs/tiptap/extensions/highlight/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-hyperlink": [
-        "libs/extensions/hyperlink/src/index.ts"
+        "libs/tiptap/extensions/hyperlink/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-iframe": [
-        "libs/extensions/iframe/src/index.ts"
+        "libs/tiptap/extensions/iframe/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-image": [
-        "libs/extensions/image/src/index.ts"
+        "libs/tiptap/extensions/image/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-line-height": [
-        "libs/extensions/line-height/src/index.ts"
+        "libs/tiptap/extensions/line-height/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-linker": [
-        "libs/extensions/linker/src/index.ts"
+        "libs/tiptap/extensions/linker/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-mathjax": [
-        "libs/extensions/mathjax/src/index.ts"
+        "libs/tiptap/extensions/mathjax/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-speech-recognition": [
-        "libs/extensions/speech-recognition/src/index.ts"
+        "libs/tiptap/extensions/speech-recognition/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-speech-synthesis": [
-        "libs/extensions/speech-synthesis/src/index.ts"
+        "libs/tiptap/extensions/speech-synthesis/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-table-cell": [
-        "libs/extensions/table-cell/src/index.ts"
+        "libs/tiptap/extensions/table-cell/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-transform": [
-        "libs/extensions/transform/src/index.ts"
+        "libs/tiptap/extensions/transform/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-video": [
-        "libs/extensions/video/src/index.ts"
+        "libs/tiptap/extensions/video/src/index.ts"
       ],
       "@ccreusat-monorepo/ui-library": [
         "libs/react/ui-library/src/index.ts"
