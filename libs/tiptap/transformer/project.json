@@ -1,0 +1,36 @@
+{
+  "name": "transformer",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/tiptap/transformer/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/tiptap/transformer",
+        "main": "libs/tiptap/transformer/src/index.ts",
+        "tsConfig": "libs/tiptap/transformer/tsconfig.lib.json",
+        "assets": [
+          "libs/tiptap/transformer/*.md"
+        ]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/libs/{projectRoot}"
+      }
+    }
+  },
+  "tags": [],
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/libs/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  }
+}

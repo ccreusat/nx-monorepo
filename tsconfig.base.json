@@ -10,35 +10,18 @@
     "importHelpers": true,
     "target": "ES2021",
     "module": "esnext",
-    "lib": [
-      "ES2021",
-      "dom"
-    ],
+    "lib": ["ES2021", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ccreusat-monorepo/bootstrap": [
-        "libs/bootstrap/scss/index.scss"
-      ],
-      "@ccreusat-monorepo/client": [
-        "libs/client/src/index.ts"
-      ],
-      "@ccreusat-monorepo/docs": [
-        "docs/src/index.ts"
-      ],
-      "@ccreusat-monorepo/editor": [
-        "libs/react/editor/src/index.ts"
-      ],
-      "@ccreusat-monorepo/icons": [
-        "libs/react/icons/src/index.ts"
-      ],
-      "@ccreusat-monorepo/icons/nav": [
-        "libs/react/icons/src/nav/index.ts"
-      ],
-      "@ccreusat-monorepo/multimedia": [
-        "libs/react/multimedia/src/index.ts"
-      ],
+      "@ccreusat-monorepo/bootstrap": ["libs/bootstrap/scss/index.scss"],
+      "@ccreusat-monorepo/client": ["libs/client/src/index.ts"],
+      "@ccreusat-monorepo/docs": ["docs/src/index.ts"],
+      "@ccreusat-monorepo/editor": ["libs/react/editor/src/index.ts"],
+      "@ccreusat-monorepo/icons": ["libs/react/icons/src/index.ts"],
+      "@ccreusat-monorepo/icons/nav": ["libs/react/icons/src/nav/index.ts"],
+      "@ccreusat-monorepo/multimedia": ["libs/react/multimedia/src/index.ts"],
       "@ccreusat-monorepo/tiptap-extension-abbr": [
         "libs/tiptap/extensions/abbr/src/index.ts"
       ],
@@ -87,19 +70,20 @@
       "@ccreusat-monorepo/tiptap-extension-table-cell": [
         "libs/tiptap/extensions/table-cell/src/index.ts"
       ],
+      "@ccreusat-monorepo/tiptap-extension-paragraph": [
+        "libs/tiptap/extensions/paragraph/src/index.ts"
+      ],
       "@ccreusat-monorepo/tiptap-extension-transform": [
         "libs/tiptap/extensions/transform/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-video": [
         "libs/tiptap/extensions/video/src/index.ts"
       ],
-      "@ccreusat-monorepo/ui-library": [
-        "libs/react/ui-library/src/index.ts"
-      ]
+      "@ccreusat-monorepo/tiptap-transformer": [
+        "libs/tiptap/transformer/src/index.ts"
+      ],
+      "@ccreusat-monorepo/ui-library": ["libs/react/ui-library/src/index.ts"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }
