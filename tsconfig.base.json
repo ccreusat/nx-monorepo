@@ -61,6 +61,9 @@
       "@ccreusat-monorepo/tiptap-extension-mathjax": [
         "libs/tiptap/extensions/mathjax/src/index.ts"
       ],
+      "@ccreusat-monorepo/tiptap-extension-paragraph": [
+        "libs/tiptap/extensions/paragraph/src/index.ts"
+      ],
       "@ccreusat-monorepo/tiptap-extension-speech-recognition": [
         "libs/tiptap/extensions/speech-recognition/src/index.ts"
       ],
@@ -69,9 +72,6 @@
       ],
       "@ccreusat-monorepo/tiptap-extension-table-cell": [
         "libs/tiptap/extensions/table-cell/src/index.ts"
-      ],
-      "@ccreusat-monorepo/tiptap-extension-paragraph": [
-        "libs/tiptap/extensions/paragraph/src/index.ts"
       ],
       "@ccreusat-monorepo/tiptap-extension-transform": [
         "libs/tiptap/extensions/transform/src/index.ts"
