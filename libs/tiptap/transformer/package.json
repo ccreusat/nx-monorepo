@@ -1,6 +1,10 @@
 {
   "name": "@ccreusat-monorepo/tiptap-transformer",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccreusat/nx-monorepo"
+  },
   "dependencies": {
     "tslib": "^2.3.0",
     "prom-client": "15.1.1",
@@ -36,6 +40,9 @@
     "jsonwebtoken": "9.0.2",
     "@tiptap/extension-table": "2.2.4",
     "@ccreusat-monorepo/tiptap-extension-table-cell": "0.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "type": "module",
   "main": "./src/index.js",
