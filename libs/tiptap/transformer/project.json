@@ -5,6 +5,9 @@
   "projectType": "library",
   "targets": {
     "build": {
+      "dependsOn": [
+        "lint"
+      ],
       "executor": "@nx/js:tsc",
       "outputs": [
         "{options.outputPath}"
@@ -20,7 +23,7 @@
     },
     "nx-release-publish": {
       "options": {
-        "packageRoot": "dist/libs/tiptap/{projectRoot}"
+        "packageRoot": "dist/libs/tiptap/{projectName}"
       }
     }
   },
@@ -28,7 +31,7 @@
   "release": {
     "version": {
       "generatorOptions": {
-        "packageRoot": "dist/libs/tiptap/{projectRoot}",
+        "packageRoot": "dist/libs/tiptap/{projectName}",
         "currentVersionResolver": "git-tag"
       }
     }
