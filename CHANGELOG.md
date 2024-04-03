@@ -1,3 +1,20 @@
+## 0.4.0 (2024-04-03)
+
+
+### 🚀 Features
+
+- **transformer:** add transformer lib ([64af15b](https://github.com/ccreusat/nx-monorepo/commit/64af15b))
+
+### 🩹 Fixes
+
+- issues with somes useless stories ([bea4abb](https://github.com/ccreusat/nx-monorepo/commit/bea4abb))
+- **transformer:** correct path project.json ([8cbe797](https://github.com/ccreusat/nx-monorepo/commit/8cbe797))
+- **transformer:** change projectRoot to projectName ([743030a](https://github.com/ccreusat/nx-monorepo/commit/743030a))
+
+### ❤️  Thank You
+
+- Clement Creusat @ccreusat
+
 ## 0.3.1 (2024-03-30)
 
 
