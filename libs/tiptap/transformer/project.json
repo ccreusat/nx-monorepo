@@ -20,7 +20,7 @@
     },
     "nx-release-publish": {
       "options": {
-        "packageRoot": "dist/libs/{projectRoot}"
+        "packageRoot": "dist/libs/tiptap/{projectRoot}"
       }
     }
   },
@@ -28,7 +28,7 @@
   "release": {
     "version": {
       "generatorOptions": {
-        "packageRoot": "dist/libs/{projectRoot}",
+        "packageRoot": "dist/libs/tiptap/{projectRoot}",
         "currentVersionResolver": "git-tag"
       }
     }
