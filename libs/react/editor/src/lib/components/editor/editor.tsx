@@ -59,7 +59,7 @@ export interface EditorProps {
   variant?: 'outline' | 'ghost';
 }
 
-const Editor = forwardRef(
+export const Editor = forwardRef(
   (
     {
       content,

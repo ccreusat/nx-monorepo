@@ -22,17 +22,17 @@
     "@ccreusat-monorepo/client": "0.0.1",
     "react-hook-form": "7.51.1",
     "@ccreusat-monorepo/icons": "0.0.1",
-    "@tanstack/react-query": "5.28.8",
-    "dayjs": "1.11.10",
-    "react-hot-toast": "2.4.1",
-    "clsx": "2.1.0",
-    "@react-spring/web": "9.7.3",
-    "ua-parser-js": "1.0.37",
-    "@floating-ui/react": "0.26.10",
-    "react-popper": "2.3.0",
-    "html-react-parser": "5.1.9",
     "ohash": "1.1.3",
-    "react-slugify": "3.0.3"
+    "react-slugify": "3.0.3",
+    "@tanstack/react-query": "5.28.8",
+    "clsx": "2.1.0",
+    "@floating-ui/react": "0.26.10",
+    "@react-spring/web": "9.7.3",
+    "react-popper": "2.3.0",
+    "dayjs": "1.11.10",
+    "ua-parser-js": "1.0.37",
+    "react-hot-toast": "2.4.1",
+    "html-react-parser": "5.1.9"
   },
   "publishConfig": {
     "access": "public"
