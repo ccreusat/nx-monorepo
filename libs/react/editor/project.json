@@ -6,9 +6,6 @@
   "tags": [],
   "targets": {
     "build": {
-      "dependsOn": [
-        "lint"
-      ],
       "executor": "@nx/vite:build",
       "outputs": [
         "{options.outputPath}"

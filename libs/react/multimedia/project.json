@@ -6,19 +6,24 @@
   "tags": [],
   "targets": {
     "build": {
-      "dependsOn": ["lint"],
       "executor": "@nx/vite:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/libs/react/multimedia",
         "main": "libs/react/multimedia/src/index.ts",
         "tsConfig": "libs/react/multimedia/tsconfig.lib.json",
-        "assets": ["libs/react/multimedia/*.md"]
+        "assets": [
+          "libs/react/multimedia/*.md"
+        ]
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
           "libs/react/multimedia/**/*.{ts,tsx,js,jsx}",

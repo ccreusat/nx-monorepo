@@ -6,19 +6,24 @@
   "tags": [],
   "targets": {
     "build": {
-      "dependsOn": ["lint"],
       "executor": "@nx/vite:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/libs/react/ui-library",
         "main": "libs/react/ui-library/src/index.ts",
         "tsConfig": "libs/react/ui-library/tsconfig.lib.json",
-        "assets": ["libs/react/ui-library/*.md"]
+        "assets": [
+          "libs/react/ui-library/*.md"
+        ]
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
           "libs/react/ui-library/**/*.{ts,tsx,js,jsx}",
