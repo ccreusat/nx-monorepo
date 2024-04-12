@@ -5,6 +5,8 @@ import dts from 'vite-plugin-dts';
 import * as path from 'path';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
+import packageJson from './package.json';
+
 export default defineConfig({
   root: __dirname,
   cacheDir: '../../../node_modules/.vite/editor',
@@ -40,50 +42,13 @@ export default defineConfig({
       fileName: 'index',
       // Change this to the formats you want to support.
       // Don't forget to update your package.json as well.
-      formats: ['es', 'cjs'],
+      formats: ['es'],
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
       external: [
-        'react',
-        'react-dom',
         'react/jsx-runtime',
-        '@ccreusat-monorepo/icons',
-        '@ccreusat-monorepo/ui-library',
-        '@tiptap/react',
-        'react-i18next',
-        '@ccreusat-monorepo/multimedia',
-        'clsx',
-        '@tiptap/starter-kit',
-        '@tiptap-pro/extension-mathematics',
-        '@ccreusat-monorepo/client',
-        '@tiptap/extension-text-align',
-        '@tiptap/extension-text-style',
-        '@tiptap/extension-typography',
-        '@tiptap/extension-underline',
-        '@tiptap/extension-superscript',
-        '@tiptap/extension-table',
-        '@tiptap/extension-table-row',
-        'emoji-picker-react',
-        '@ccreusat-monorepo/tiptap-extension-attachment',
-        '@ccreusat-monorepo/tiptap-extension-alert',
-        '@tiptap/extension-color',
-        '@tiptap/extension-focus',
-        '@tiptap/extension-font-family',
-        '@tiptap/extension-subscript',
-        '@tiptap/extension-table-header',
-        '@ccreusat-monorepo/tiptap-extension-image',
-        '@ccreusat-monorepo/tiptap-extension-audio',
-        '@ccreusat-monorepo/tiptap-extension-linker',
-        '@ccreusat-monorepo/tiptap-extension-video',
-        '@ccreusat-monorepo/tiptap-extension-hyperlink',
-        '@ccreusat-monorepo/tiptap-extension-font-size',
-        '@ccreusat-monorepo/tiptap-extension-heading',
-        '@ccreusat-monorepo/tiptap-extension-highlight',
-        '@ccreusat-monorepo/tiptap-extension-iframe',
-        '@ccreusat-monorepo/tiptap-extension-table-cell',
-        '@ccreusat-monorepo/tiptap-extension-speech-recognition',
-        '@ccreusat-monorepo/tiptap-extension-speech-synthesis',
+        ...Object.keys(packageJson.dependencies || {}),
       ],
     },
   },

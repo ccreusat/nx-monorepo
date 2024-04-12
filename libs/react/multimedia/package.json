@@ -6,12 +6,12 @@
     "url": "https://github.com/ccreusat/nx-monorepo"
   },
   "version": "0.0.1",
-  "main": "./index.js",
+  "type": "module",
+  "module": "./index.js",
   "types": "./index.d.ts",
   "exports": {
     ".": {
-      "import": "./index.mjs",
-      "require": "./index.js"
+      "import": "./index.js"
     }
   },
   "dependencies": {
@@ -23,7 +23,7 @@
     "react-i18next": "14.1.0",
     "pako": "2.1.0",
     "@pixi/react": "7.1.2",
-    "pixi.js": "8.0.4"
+    "pixi.js": "7.4.2"
   },
   "publishConfig": {
     "access": "public"

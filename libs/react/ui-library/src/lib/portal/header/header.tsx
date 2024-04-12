@@ -99,7 +99,7 @@ export const Header = ({
                 <Avatar
                   alt={userName}
                   size="sm"
-                  src={userAvatar}
+                  src={`${userAvatar}?thumbnail=32x32`}
                   variant="circle"
                   width="32"
                   height="32"
@@ -348,7 +348,7 @@ export const Header = ({
                         <Avatar
                           alt={userName}
                           size="sm"
-                          src={userAvatar}
+                          src={`${userAvatar}?thumbnail=32x32`}
                           variant="circle"
                           className="bg-white"
                           width="32"

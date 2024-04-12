@@ -9,7 +9,7 @@ import {
   odeServices,
 } from '@ccreusat-monorepo/client';
 
-const useUpdateMutation = ({
+export const useUpdateMutation = ({
   application,
   options,
 }: {

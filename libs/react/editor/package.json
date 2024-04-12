@@ -6,12 +6,12 @@
     "url": "https://github.com/ccreusat/nx-monorepo"
   },
   "version": "0.0.1",
-  "main": "./index.js",
+  "type": "module",
+  "module": "./index.js",
   "types": "./index.d.ts",
   "exports": {
     ".": {
-      "import": "./index.mjs",
-      "require": "./index.js"
+      "import": "./index.js"
     }
   },
   "dependencies": {

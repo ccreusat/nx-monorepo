@@ -9,7 +9,7 @@ import {
   odeServices,
 } from '@ccreusat-monorepo/client';
 
-const useShareMutation = ({
+export const useShareMutation = ({
   application,
   options,
 }: {
