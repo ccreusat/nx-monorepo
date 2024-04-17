@@ -165,8 +165,7 @@
   "release": {
     "projects": [
       "libs/*",
-      "libs/**/*",
-      "!libs/react/test"
+      "libs/**/*"
     ],
     "version": {
       "preVersionCommand": "pnpm dlx nx run-many -t build",
