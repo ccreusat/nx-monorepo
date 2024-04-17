@@ -21,15 +21,36 @@ const queryClient = new QueryClient({
 
 const preview = {
   parameters: {
+    actions: { argTypesRegex: '^on[A-Z].*' },
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/,
+      },
+    },
+    options: {
+      storySort: {
+        method: 'alphabetical',
+        order: [
+          'Introduction',
+          ['Welcome', '*'],
+          'Design Tokens',
+          'Icons',
+          'Components',
+          ['Base', '*'],
+          'Layouts',
+        ],
+      },
+    },
     msw: {
       handlers: {
-        apps: http.get('/userbook/preference/apps', () => {
+        'apps': http.get('/userbook/preference/apps', () => {
           return HttpResponse.json({
             preference:
               '{"bookmarks":[],"applications":["Actualites","Annuaire","Aide et support","Blog","Diary","Cahier Multimédia","Cahier de texte","Schoolbook","Mindmap","Rack","Community","Administration","Espace documentaire","Exercices et évaluations","Formulaire","Forum","TimelineGenerator","Archive","Messagerie","Moodle","CollaborativeWall","Mediacentre","Collaborative Editor","Pages","Paramétrage de la classe","Viescolaire","ShareBigFiles","Pronote","Réservation de ressources","website","Poll","Statistiques","Web-conference","Wiki"]}',
           });
         }),
-        person: http.get('userbook/api/person', () => {
+        'person': http.get('userbook/api/person', () => {
           return HttpResponse.json({
             status: 'ok',
             result: [
@@ -66,7 +87,7 @@ const preview = {
             ],
           });
         }),
-        theme: http.get('/theme', () => {
+        'theme': http.get('/theme', () => {
           return HttpResponse.json({
             template: '/public/template/portal.html',
             logoutCallback: '',
@@ -75,10 +96,10 @@ const preview = {
             skinName: 'default',
           });
         }),
-        locale: http.get('/locale', () => {
+        'locale': http.get('/locale', () => {
           return HttpResponse.text('fr');
         }),
-        directory: http.get(
+        'directory': http.get(
           '/directory/userbook/f6c5ea40-5405-4cea-a755-8a0170bc6741',
           () => {
             return HttpResponse.json({
@@ -96,13 +117,13 @@ const preview = {
             });
           }
         ),
-        quota: http.get(
+        'quota': http.get(
           '/workspace/quota/user/f6c5ea40-5405-4cea-a755-8a0170bc6741',
           () => {
             return HttpResponse.json({ quota: 104857600, storage: 27683216 });
           }
         ),
-        userinfo: http.get('/auth/oauth2/userinfo', () => {
+        'userinfo': http.get('/auth/oauth2/userinfo', () => {
           return HttpResponse.json({
             classNames: null,
             level: '',
@@ -201,7 +222,7 @@ const preview = {
             sessionMetadata: {},
           });
         }),
-        rgpdCookies: http.get('/userbook/preference/rgpdCookies', () => {
+        'rgpdCookies': http.get('/userbook/preference/rgpdCookies', () => {
           return HttpResponse.json({ preference: '{"showInfoTip":false}' });
         }),
         'application-list': http.get('/applications-list', () => {
