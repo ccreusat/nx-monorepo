@@ -23,7 +23,9 @@
       "!{projectRoot}/src/test-setup.[jt]s",
       "!{projectRoot}/test-setup.[jt]s"
     ],
-    "sharedGlobals": []
+    "sharedGlobals": [
+      "{projectRoot}/.github/workflows/publish.yml"
+    ]
   },
   "targetDefaults": {
     "@nx/vite:build": {
